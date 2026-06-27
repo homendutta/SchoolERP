@@ -18,6 +18,17 @@ import { MasterDataPage } from '@features/administration/MasterDataPage';
 import { FeatureFlagsPage } from '@features/administration/FeatureFlagsPage';
 import { NumberGeneratorPage } from '@features/administration/NumberGeneratorPage';
 import { GatewaysPage } from '@features/administration/GatewaysPage';
+import { AcademicDashboardPage } from '@features/academic/AcademicDashboardPage';
+import { AcademicYearsPage } from '@features/academic/AcademicYearsPage';
+import { TermsPage } from '@features/academic/TermsPage';
+import { AcademicCalendarPage } from '@features/academic/AcademicCalendarPage';
+import { ClassesPage } from '@features/academic/ClassesPage';
+import { SectionsPage } from '@features/academic/SectionsPage';
+import { RoomsPage } from '@features/academic/RoomsPage';
+import { SubjectsPage } from '@features/academic/SubjectsPage';
+import { SubjectGroupsPage } from '@features/academic/SubjectGroupsPage';
+import { TeacherAssignmentsPage } from '@features/academic/TeacherAssignmentsPage';
+import { ClassTeachersPage } from '@features/academic/ClassTeachersPage';
 
 interface DashboardLayoutProps {
   children?: (activeMenu: string) => ReactNode;
@@ -108,6 +119,29 @@ function renderContent(activeMenu: string) {
       return <FeatureFlagsPage />;
     case 'gateways':
       return <GatewaysPage />;
+    // Academic module
+    case 'academicDashboard':
+      return <AcademicDashboardPage />;
+    case 'academicYears':
+      return <AcademicYearsPage />;
+    case 'terms':
+      return <TermsPage />;
+    case 'academicCalendar':
+      return <AcademicCalendarPage />;
+    case 'classes':
+      return <ClassesPage />;
+    case 'sections':
+      return <SectionsPage />;
+    case 'rooms':
+      return <RoomsPage />;
+    case 'subjects':
+      return <SubjectsPage />;
+    case 'subjectGroups':
+      return <SubjectGroupsPage />;
+    case 'assignments':
+      return <TeacherAssignmentsPage />;
+    case 'classTeachers':
+      return <ClassTeachersPage />;
     default:
       return <DefaultContent activeMenu={activeMenu} />;
   }

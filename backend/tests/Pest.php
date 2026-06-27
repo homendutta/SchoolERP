@@ -8,6 +8,7 @@ use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Administration');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Academic');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

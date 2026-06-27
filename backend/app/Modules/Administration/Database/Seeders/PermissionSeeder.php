@@ -28,6 +28,17 @@ class PermissionSeeder extends Seeder
         'gateways' => ['view', 'manage', 'test'],
         'import' => ['execute'],
         'export' => ['execute'],
+        // Academic (Sprint 3)
+        'academic.years' => ['view', 'create', 'edit', 'delete'],
+        'academic.terms' => ['view', 'create', 'edit', 'delete'],
+        'academic.calendar' => ['view', 'create', 'edit', 'delete'],
+        'academic.classes' => ['view', 'create', 'edit', 'delete'],
+        'academic.sections' => ['view', 'create', 'edit', 'delete'],
+        'academic.rooms' => ['view', 'create', 'edit', 'delete'],
+        'academic.subjects' => ['view', 'create', 'edit', 'delete'],
+        'academic.subject_groups' => ['view', 'create', 'edit', 'delete'],
+        'academic.teacher_assignments' => ['view', 'create', 'edit', 'delete'],
+        'academic.class_teachers' => ['view', 'assign'],
     ];
 
     public function run(): void

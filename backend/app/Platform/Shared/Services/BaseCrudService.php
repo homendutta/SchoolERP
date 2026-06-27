@@ -110,6 +110,20 @@ abstract class BaseCrudService extends BaseService
     public function update(Model $model, array $data): Model
     {
         return $this->transaction(function () use ($model, $data): Model {
+            // Optimistic locking: when the record carries a `version` and the
+            // client sends the version it edited, reject stale writes.
+            if (array_key_exists('version', $data) && $model->getAttribute('version') !== null) {
+                if ((int) $data['version'] !== (int) $model->getAttribute('version')) {
+                    throw new \App\Platform\Shared\Exceptions\DomainException(
+                        'This record was changed by someone else. Please reload and try again.',
+                        409,
+                        'STALE_VERSION',
+                    );
+                }
+                unset($data['version']);
+                $model->setAttribute('version', (int) $model->getAttribute('version') + 1);
+            }
+
             $model->fill($data)->save();
 
             return $model->refresh();

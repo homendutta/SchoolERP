@@ -61,6 +61,15 @@ export const MENU_CATALOG: Record<string, MenuItem> = {
   ptm: { id: 'ptm', label: 'PTM', icon: 'comments', group: 'daily' },
   substitutes: { id: 'substitutes', label: 'Substitutes', icon: 'user-times', group: 'daily' },
 
+  academicDashboard: { id: 'academicDashboard', label: 'Academic Dashboard', icon: 'graduation-cap', group: 'academic' },
+  academicYears: { id: 'academicYears', label: 'Academic Years', icon: 'calendar-alt', group: 'academic' },
+  terms: { id: 'terms', label: 'Terms', icon: 'layer-group', group: 'academic' },
+  academicCalendar: { id: 'academicCalendar', label: 'Academic Calendar', icon: 'calendar-day', group: 'academic' },
+  sections: { id: 'sections', label: 'Sections', icon: 'table-cells', group: 'academic' },
+  rooms: { id: 'rooms', label: 'Rooms', icon: 'door-open', group: 'academic' },
+  subjectGroups: { id: 'subjectGroups', label: 'Subject Groups', icon: 'object-group', group: 'academic' },
+  classTeachers: { id: 'classTeachers', label: 'Class Teachers', icon: 'user-tie', group: 'academic' },
+
   exams: { id: 'exams', label: 'Exams', icon: 'file-alt', group: 'academic' },
   marks: { id: 'marks', label: 'Results / Marks', icon: 'graduation-cap', group: 'academic' },
   hallTickets: { id: 'hallTickets', label: 'Hall Tickets', icon: 'id-card-alt', group: 'academic' },
@@ -103,13 +112,22 @@ export const MENU_CATALOG: Record<string, MenuItem> = {
  * the order in which a role sees items. Final visibility is enforced by RBAC.
  */
 export const MENU_PRIORITY: Record<Role, string[]> = {
-  super_admin: ['dashboard', 'reports', 'users', 'roles', 'schoolSettings', 'masterData', 'numberGenerator', 'featureFlags', 'gateways', 'settings', 'about'],
+  super_admin: [
+    'dashboard', 'reports',
+    'academicDashboard', 'academicYears', 'terms', 'academicCalendar', 'classes',
+    'sections', 'rooms', 'subjects', 'subjectGroups', 'assignments', 'classTeachers',
+    'users', 'roles', 'schoolSettings', 'masterData', 'numberGenerator', 'featureFlags',
+    'gateways', 'settings', 'about',
+  ],
   admin: [
-    'dashboard', 'reports', 'admissions', 'students', 'classes', 'timetable',
+    'dashboard', 'reports', 'admissions', 'students',
+    'academicDashboard', 'academicYears', 'terms', 'academicCalendar', 'classes',
+    'sections', 'rooms', 'subjects', 'subjectGroups', 'assignments', 'classTeachers',
+    'timetable',
     'attendance', 'substitutes', 'exams', 'marks', 'hallTickets', 'feePayments',
     'accounts', 'feeStructure', 'notices', 'ptm', 'calendar', 'discipline',
     'conduct', 'activities', 'lessonPlans', 'logbook', 'helpdesk', 'complaints',
-    'documents', 'parents', 'assets', 'inventory', 'subjects', 'assignments',
+    'documents', 'parents', 'assets', 'inventory',
     'schoolSettings', 'masterData', 'numberGenerator', 'featureFlags', 'gateways',
     'users', 'roles', 'account', 'settings', 'about',
   ],

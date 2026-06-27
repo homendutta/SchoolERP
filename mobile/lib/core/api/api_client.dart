@@ -23,6 +23,10 @@ class ApiClient {
 
   Future<dynamic> post(String path, {Object? body}) => _send('POST', path, body: body);
 
+  Future<dynamic> put(String path, {Object? body}) => _send('PUT', path, body: body);
+
+  Future<dynamic> delete(String path) => _send('DELETE', path);
+
   Future<dynamic> _send(String method, String path, {Object? body}) async {
     final uri = Uri.parse('$baseUrl$path');
     final headers = <String, String>{
@@ -39,6 +43,10 @@ class ApiClient {
     switch (method) {
       case 'POST':
         res = await http.post(uri, headers: headers, body: encoded);
+      case 'PUT':
+        res = await http.put(uri, headers: headers, body: encoded);
+      case 'DELETE':
+        res = await http.delete(uri, headers: headers);
       case 'GET':
       default:
         res = await http.get(uri, headers: headers);
