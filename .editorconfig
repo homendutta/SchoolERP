@@ -1,0 +1,34 @@
+# EditorConfig — consistent formatting across backend (PHP), frontend (TS/CSS), mobile (Dart).
+# https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# PHP — PSR-12 (4 spaces)
+[*.php]
+indent_size = 4
+
+# Web — TS/TSX/JS/JSON/CSS (2 spaces)
+[*.{ts,tsx,js,jsx,json,css,scss,html}]
+indent_size = 2
+
+# Dart (Flutter) — 2 spaces
+[*.dart]
+indent_size = 2
+
+# YAML / Neon / config
+[*.{yml,yaml,neon}]
+indent_size = 2
+
+# Markdown — keep trailing spaces (hard line breaks)
+[*.md]
+trim_trailing_whitespace = false
+
+# Makefiles need tabs
+[Makefile]
+indent_style = tab

@@ -1,0 +1,963 @@
+{
+  "nodes": [
+    {
+      "id": "backend_readme_backend_layer",
+      "label": "Backend — Asylinx School ERP (Laravel 12)",
+      "file_type": "document",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_platform_layer",
+      "label": "Platform Layer (Infrastructure)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_modules_layer",
+      "label": "Modules Layer (Business Modules)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_layering_pattern",
+      "label": "Mandatory Layering: Controller → Request → Service → Repository → Model",
+      "file_type": "rationale",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Enforces separation of concerns: Controllers are thin orchestrators, Services are the sole home of business rules, Repositories are the only place touching persistence, keeping each layer focused and testable."
+    },
+    {
+      "id": "backend_readme_administration_module",
+      "label": "Administration Module",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_authentication_module",
+      "label": "Authentication Module",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_academic_module",
+      "label": "Academic Module",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_admissions_module",
+      "label": "Admissions Module",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_students_module",
+      "label": "Students Module",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "backend_readme_standard_module_structure",
+      "label": "Standard Module Structure",
+      "file_type": "rationale",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Every business module follows the same internal layout (Config, Database, Events, Http, Jobs, Models, Policies, Providers, Repositories, Routes, Services, Tests) for consistency and predictability across vertical slices."
+    },
+    {
+      "id": "backend_readme_module_communication_rule",
+      "label": "Inter-Module Communication via Services and Domain Events Only",
+      "file_type": "rationale",
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Modules must never reach into another module's data directly; they communicate via services and domain events to maintain loose coupling and clear module boundaries."
+    },
+    {
+      "id": "platform_core_readme_platform_core",
+      "label": "Platform / Core (Framework Kernel)",
+      "file_type": "document",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_core_readme_module_service_provider",
+      "label": "ModuleServiceProvider (Abstract Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_core_readme_bootstrap",
+      "label": "Bootstrap (Application/Module Bootstrapping)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_core_readme_routing",
+      "label": "Routing (Module Route Registration Kernel)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_core_readme_middleware",
+      "label": "Middleware (Auth/Permission/Scope/Audit-Context Hooks)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_core_readme_exceptions",
+      "label": "Exceptions (Standard API Envelope Handling)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_platform_foundation",
+      "label": "Platform / Foundation (Cross-Cutting Infrastructure Services)",
+      "file_type": "document",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_audit",
+      "label": "Audit (Append-Only Audit Infrastructure)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_media",
+      "label": "Media (Single Media Library / Storage Abstraction)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_notifications",
+      "label": "Notifications (Central Dispatch Infrastructure + Channel Drivers)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_search",
+      "label": "Search (Global Search Indexing Infrastructure)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_cache",
+      "label": "Cache (Caching Infrastructure)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_foundation_readme_tenancy",
+      "label": "Tenancy (Tenant-Awareness Primitives, SaaS-Ready)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_readme_platform_layer_overview",
+      "label": "Platform Layer Overview",
+      "file_type": "document",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_readme_platform_infra_only_rule",
+      "label": "Platform Infrastructure-Only Rule",
+      "file_type": "rationale",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Platform contains no business logic. Business behaviour (Settings, Number Generator, Import/Export, master data) lives in the Administration module, not Platform. Business modules depend on Platform; Platform depends on no business module. This enforces a clean dependency direction."
+    },
+    {
+      "id": "platform_shared_readme_platform_shared",
+      "label": "Platform / Shared (Reusable Base Building Blocks)",
+      "file_type": "document",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_controller",
+      "label": "BaseController (Thin Orchestration Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_request",
+      "label": "BaseRequest (Validation + Authorization Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_resource",
+      "label": "BaseResource (Response Transformer Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_api_response",
+      "label": "ApiResponse (Standard Success/Error Envelope)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_service",
+      "label": "BaseService + ServiceInterface (Business-Rule Layer Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_repository",
+      "label": "BaseRepository + RepositoryInterface (Data-Access Layer Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_policy",
+      "label": "BasePolicy (RBAC Policy Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_domain_event",
+      "label": "DomainEvent (Domain Event Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_base_job",
+      "label": "BaseJob (Queued Job Base)",
+      "file_type": "concept",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_shared_readme_enterprise_refactor",
+      "label": "Enterprise Refactor (Relocation from app/Shared to app/Platform/Shared)",
+      "file_type": "rationale",
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Shared base classes were relocated from app/Shared to app/Platform/Shared during the enterprise refactor. Existing code was preserved and only re-namespaced — no business logic was added."
+    }
+  ],
+  "edges": [
+    {
+      "source": "backend_readme_backend_layer",
+      "target": "backend_readme_platform_layer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 8-14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_backend_layer",
+      "target": "backend_readme_modules_layer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 15-38",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "backend_readme_administration_module",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 17-18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "backend_readme_authentication_module",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 19",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "backend_readme_academic_module",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 20-22",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "backend_readme_admissions_module",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 23-24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "backend_readme_students_module",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 25",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_layering_pattern",
+      "target": "platform_shared_readme_base_controller",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 66-74",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_layering_pattern",
+      "target": "platform_shared_readme_base_service",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 66-74",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_layering_pattern",
+      "target": "platform_shared_readme_base_repository",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 66-74",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_backend_layer",
+      "target": "backend_readme_layering_pattern",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 63-74",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_backend_layer",
+      "target": "backend_readme_standard_module_structure",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 43-61",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_backend_layer",
+      "target": "backend_readme_module_communication_rule",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 87-90",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_platform_layer",
+      "target": "platform_core_readme_platform_core",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_platform_layer",
+      "target": "platform_foundation_readme_platform_foundation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_platform_layer",
+      "target": "platform_shared_readme_platform_shared",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 13-15",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_core_readme_platform_core",
+      "target": "platform_core_readme_module_service_provider",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 7",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_core_readme_platform_core",
+      "target": "platform_core_readme_bootstrap",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 8",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_core_readme_platform_core",
+      "target": "platform_core_readme_routing",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 9",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_core_readme_platform_core",
+      "target": "platform_core_readme_middleware",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 10",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_core_readme_platform_core",
+      "target": "platform_core_readme_exceptions",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "platform_core_readme_module_service_provider",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 75-76",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_foundation_readme_platform_foundation",
+      "target": "platform_foundation_readme_audit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 9",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_foundation_readme_platform_foundation",
+      "target": "platform_foundation_readme_media",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 10",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_foundation_readme_platform_foundation",
+      "target": "platform_foundation_readme_notifications",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 11",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_foundation_readme_platform_foundation",
+      "target": "platform_foundation_readme_search",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 12",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_foundation_readme_platform_foundation",
+      "target": "platform_foundation_readme_cache",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 13",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_foundation_readme_platform_foundation",
+      "target": "platform_foundation_readme_tenancy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 14",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_readme_platform_layer_overview",
+      "target": "platform_core_readme_platform_core",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": "line 8",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_readme_platform_layer_overview",
+      "target": "platform_foundation_readme_platform_foundation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": "line 9",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_readme_platform_layer_overview",
+      "target": "platform_shared_readme_platform_shared",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": "line 10",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_readme_platform_infra_only_rule",
+      "target": "backend_readme_administration_module",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": "line 20-23",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_controller",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 9",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_request",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 10",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_resource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 11",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_api_response",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 12",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_service",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 13",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_repository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 14",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_policy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 15",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_domain_event",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 16",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_platform_shared",
+      "target": "platform_shared_readme_base_job",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 17",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_shared_readme_enterprise_refactor",
+      "target": "platform_shared_readme_platform_shared",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 23-24",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_core_readme_exceptions",
+      "target": "platform_shared_readme_api_response",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 11",
+      "weight": 0.85
+    },
+    {
+      "source": "backend_readme_module_communication_rule",
+      "target": "platform_shared_readme_domain_event",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\SchoolERP\\backend\\README.md",
+      "source_location": "line 88",
+      "weight": 0.85
+    },
+    {
+      "source": "platform_core_readme_middleware",
+      "target": "platform_shared_readme_base_policy",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 10",
+      "weight": 0.75
+    },
+    {
+      "source": "backend_readme_modules_layer",
+      "target": "platform_foundation_readme_platform_foundation",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Foundation\\README.md",
+      "source_location": "line 17",
+      "weight": 0.95
+    },
+    {
+      "source": "platform_readme_platform_layer_overview",
+      "target": "backend_readme_backend_layer",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "backend_readme_layering_pattern",
+      "target": "platform_shared_readme_platform_shared",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md",
+      "source_location": "line 20",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_readme_platform_infra_only_rule",
+      "target": "platform_foundation_readme_platform_foundation",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md",
+      "source_location": "line 20-23",
+      "weight": 0.95
+    },
+    {
+      "source": "platform_core_readme_module_service_provider",
+      "target": "platform_shared_readme_base_service",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md",
+      "source_location": "line 16-18",
+      "weight": 0.65
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyperedge_platform_three_sublayers",
+      "label": "Platform Layer Three-Sublayer Architecture (Core + Foundation + Shared)",
+      "nodes": [
+        "platform_core_readme_platform_core",
+        "platform_foundation_readme_platform_foundation",
+        "platform_shared_readme_platform_shared"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\README.md"
+    },
+    {
+      "id": "hyperedge_module_layering_stack",
+      "label": "Module Layering Stack: Controller → Request → Service → Repository → Model",
+      "nodes": [
+        "platform_shared_readme_base_controller",
+        "platform_shared_readme_base_request",
+        "platform_shared_readme_base_service",
+        "platform_shared_readme_base_repository"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Shared\\README.md"
+    },
+    {
+      "id": "hyperedge_module_provider_wiring",
+      "label": "Module Provider Wiring: ModuleServiceProvider + Bootstrap + Routing",
+      "nodes": [
+        "platform_core_readme_module_service_provider",
+        "platform_core_readme_bootstrap",
+        "platform_core_readme_routing",
+        "backend_readme_modules_layer"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\SchoolERP\\backend\\app\\Platform\\Core\\README.md"
+    }
+  ],
+  "input_tokens": 2100,
+  "output_tokens": 2800
+}

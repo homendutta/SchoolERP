@@ -1,0 +1,26 @@
+# Asylinx School ERP — repository-root ignores.
+# Each stack (backend/ frontend/ mobile/) has its own .gitignore for stack-specific paths.
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# Archives / build artifacts that must not be committed
+*.zip
+*.tar
+*.tar.gz
+
+# Logs
+*.log

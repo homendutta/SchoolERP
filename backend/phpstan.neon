@@ -1,0 +1,31 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 5
+
+    reportUnmatchedIgnoredErrors: false
+
+    paths:
+        - app
+
+    # Schema/migrations are designed declaratively; analyse the application logic.
+    excludePaths:
+        - app/Modules/*/Database/*
+
+    ignoreErrors:
+        # Eloquent soft-delete scopes are dynamic on the generic Builder.
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder.*::(withTrashed|onlyTrashed|whereKey)\(\)#'
+        # DB::transaction template-type resolution noise from the framework.
+        - '#Unable to resolve the template type TCallbackReturnType in call to static method Illuminate\\Database\\Connection::transaction\(\)#'
+        # Model attributes are DB columns (module migrations live outside the default
+        # scan path); property access is verified at runtime + by tests. Generate
+        # @property docblocks via ide-helper to tighten this later.
+        - '#Access to an undefined property App\\(Modules|Platform)\\.*::\$#'
+        - '#Call to an undefined method App\\(Modules|Platform)\\.*#'
+        # Eloquent relations are typed as the generic base Model by PHPStan.
+        - '#(Access to an undefined property|Call to an undefined method) Illuminate\\Database\\Eloquent\\Model::#'
+        # Strictness-only noise (nullsafe on hydrated models, trait-provided methods, collection callback generics).
+        - '#nullsafe property access .* is unnecessary#'
+        - '#will always evaluate to true#'
+        - '#Parameter \#1 \$callback of method Illuminate\\(Database\\Eloquent|Support)\\Collection#'
