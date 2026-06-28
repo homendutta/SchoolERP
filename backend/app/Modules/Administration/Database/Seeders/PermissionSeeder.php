@@ -62,6 +62,8 @@ class PermissionSeeder extends Seeder
         'timetable' => ['view', 'manage', 'substitute', 'copy'],
         // Examination (Sprint 9)
         'examinations' => ['view', 'manage', 'marks', 'publish'],
+        // Finance & Fees (Sprint 10)
+        'finance' => ['view', 'manage', 'collect', 'refund'],
     ];
 
     public function run(): void

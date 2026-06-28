@@ -60,6 +60,20 @@ import { ExportPage as StaffExportPage } from '@features/staff/ExportPage';
 import { IdentityDashboardPage } from '@features/identity/IdentityDashboardPage';
 import { IdentityListPage } from '@features/identity/IdentityListPage';
 import { IdentityDetailsPage } from '@features/identity/IdentityDetailsPage';
+import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
+import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
+import { FeeMastersPage } from '@features/finance/FeeMastersPage';
+import { FeeStructuresPage } from '@features/finance/FeeStructuresPage';
+import { StudentFeesPage } from '@features/finance/StudentFeesPage';
+import { InstallmentsPage } from '@features/finance/InstallmentsPage';
+import { DiscountsPage } from '@features/finance/DiscountsPage';
+import { ScholarshipsPage } from '@features/finance/ScholarshipsPage';
+import { FineRulesPage } from '@features/finance/FineRulesPage';
+import { PaymentsPage } from '@features/finance/PaymentsPage';
+import { RefundsPage } from '@features/finance/RefundsPage';
+import { AdjustmentsPage } from '@features/finance/AdjustmentsPage';
+import { LedgerPage } from '@features/finance/LedgerPage';
+import { DefaultersPage } from '@features/finance/DefaultersPage';
 import { ExamDashboardPage } from '@features/examination/ExamDashboardPage';
 import { ExamTypesPage } from '@features/examination/ExamTypesPage';
 import { ExamSessionsPage } from '@features/examination/ExamSessionsPage';
@@ -265,6 +279,35 @@ function renderContent(activeMenu: string) {
       return <IdentityListPage />;
     case 'identityDetails':
       return <IdentityDetailsPage />;
+
+    case 'finDashboard':
+      return <FinanceDashboardPage />;
+    case 'feeCategories':
+      return <FeeCategoriesPage />;
+    case 'feeMasters':
+      return <FeeMastersPage />;
+    case 'feeStructures':
+      return <FeeStructuresPage />;
+    case 'studentFees':
+      return <StudentFeesPage />;
+    case 'finInstallments':
+      return <InstallmentsPage />;
+    case 'finDiscounts':
+      return <DiscountsPage />;
+    case 'finScholarships':
+      return <ScholarshipsPage />;
+    case 'finFineRules':
+      return <FineRulesPage />;
+    case 'finPayments':
+      return <PaymentsPage />;
+    case 'finRefunds':
+      return <RefundsPage />;
+    case 'finAdjustments':
+      return <AdjustmentsPage />;
+    case 'finLedger':
+      return <LedgerPage />;
+    case 'finDefaulters':
+      return <DefaultersPage />;
 
     case 'examDashboard':
       return <ExamDashboardPage />;
