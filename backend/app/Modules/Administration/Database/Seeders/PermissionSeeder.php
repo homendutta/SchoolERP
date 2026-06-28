@@ -64,6 +64,8 @@ class PermissionSeeder extends Seeder
         'examinations' => ['view', 'manage', 'marks', 'publish'],
         // Finance & Fees (Sprint 10)
         'finance' => ['view', 'manage', 'collect', 'refund'],
+        // Communication (Sprint 11)
+        'communication' => ['view', 'manage', 'send'],
     ];
 
     public function run(): void

@@ -60,6 +60,14 @@ import { ExportPage as StaffExportPage } from '@features/staff/ExportPage';
 import { IdentityDashboardPage } from '@features/identity/IdentityDashboardPage';
 import { IdentityListPage } from '@features/identity/IdentityListPage';
 import { IdentityDetailsPage } from '@features/identity/IdentityDetailsPage';
+import { CommunicationDashboardPage } from '@features/communication/CommunicationDashboardPage';
+import { TemplatesPage as CommTemplatesPage } from '@features/communication/TemplatesPage';
+import { MessageQueuePage } from '@features/communication/MessageQueuePage';
+import { ScheduledMessagesPage } from '@features/communication/ScheduledMessagesPage';
+import { AnnouncementsPage } from '@features/communication/AnnouncementsPage';
+import { CircularsPage } from '@features/communication/CircularsPage';
+import { UserPreferencesPage } from '@features/communication/UserPreferencesPage';
+import { DeliveryTrackingPage } from '@features/communication/DeliveryTrackingPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -279,6 +287,23 @@ function renderContent(activeMenu: string) {
       return <IdentityListPage />;
     case 'identityDetails':
       return <IdentityDetailsPage />;
+
+    case 'commDashboard':
+      return <CommunicationDashboardPage />;
+    case 'commTemplates':
+      return <CommTemplatesPage />;
+    case 'commQueue':
+      return <MessageQueuePage />;
+    case 'commScheduled':
+      return <ScheduledMessagesPage />;
+    case 'commAnnouncements':
+      return <AnnouncementsPage />;
+    case 'commCirculars':
+      return <CircularsPage />;
+    case 'commPreferences':
+      return <UserPreferencesPage />;
+    case 'commTracking':
+      return <DeliveryTrackingPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;
