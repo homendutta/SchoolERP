@@ -60,6 +60,14 @@ import { ExportPage as StaffExportPage } from '@features/staff/ExportPage';
 import { IdentityDashboardPage } from '@features/identity/IdentityDashboardPage';
 import { IdentityListPage } from '@features/identity/IdentityListPage';
 import { IdentityDetailsPage } from '@features/identity/IdentityDetailsPage';
+import { TimetableDashboardPage } from '@features/timetable/TimetableDashboardPage';
+import { ClassTimetablePage } from '@features/timetable/ClassTimetablePage';
+import { TeacherTimetablePage } from '@features/timetable/TeacherTimetablePage';
+import { RoomTimetablePage } from '@features/timetable/RoomTimetablePage';
+import { PeriodManagementPage } from '@features/timetable/PeriodManagementPage';
+import { WorkingDaysPage } from '@features/timetable/WorkingDaysPage';
+import { TemplatesPage as TimetableTemplatesPage } from '@features/timetable/TemplatesPage';
+import { SubstitutionsPage } from '@features/timetable/SubstitutionsPage';
 import { AttendanceDashboardPage } from '@features/attendance/AttendanceDashboardPage';
 import { StudentAttendancePage } from '@features/attendance/StudentAttendancePage';
 import { StaffAttendancePage } from '@features/attendance/StaffAttendancePage';
@@ -246,6 +254,23 @@ function renderContent(activeMenu: string) {
       return <IdentityListPage />;
     case 'identityDetails':
       return <IdentityDetailsPage />;
+
+    case 'timetableDashboard':
+      return <TimetableDashboardPage />;
+    case 'classTimetable':
+      return <ClassTimetablePage />;
+    case 'teacherTimetable':
+      return <TeacherTimetablePage />;
+    case 'roomTimetable':
+      return <RoomTimetablePage />;
+    case 'timetablePeriods':
+      return <PeriodManagementPage />;
+    case 'workingDays':
+      return <WorkingDaysPage />;
+    case 'timetableTemplates':
+      return <TimetableTemplatesPage />;
+    case 'substitutions':
+      return <SubstitutionsPage />;
 
     case 'attendanceDashboard':
       return <AttendanceDashboardPage />;

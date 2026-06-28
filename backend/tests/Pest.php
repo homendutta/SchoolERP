@@ -15,6 +15,7 @@ uses(TestCase::class, RefreshDatabase::class)->in('Feature/Students');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Staff');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Identity');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Attendance');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Timetable');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

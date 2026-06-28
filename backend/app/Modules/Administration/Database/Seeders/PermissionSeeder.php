@@ -58,6 +58,8 @@ class PermissionSeeder extends Seeder
         'staff' => ['view', 'create', 'edit', 'delete', 'import', 'export'],
         // Attendance (Sprint 7)
         'attendance' => ['view', 'mark', 'correct', 'import', 'devices', 'biometric'],
+        // Timetable (Sprint 8)
+        'timetable' => ['view', 'manage', 'substitute', 'copy'],
     ];
 
     public function run(): void
