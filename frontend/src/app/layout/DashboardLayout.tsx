@@ -60,6 +60,17 @@ import { ExportPage as StaffExportPage } from '@features/staff/ExportPage';
 import { IdentityDashboardPage } from '@features/identity/IdentityDashboardPage';
 import { IdentityListPage } from '@features/identity/IdentityListPage';
 import { IdentityDetailsPage } from '@features/identity/IdentityDetailsPage';
+import { ExamDashboardPage } from '@features/examination/ExamDashboardPage';
+import { ExamTypesPage } from '@features/examination/ExamTypesPage';
+import { ExamSessionsPage } from '@features/examination/ExamSessionsPage';
+import { ExamSchedulePage } from '@features/examination/ExamSchedulePage';
+import { SeatingPlanPage } from '@features/examination/SeatingPlanPage';
+import { ExamAttendancePage } from '@features/examination/ExamAttendancePage';
+import { MarksEntryPage } from '@features/examination/MarksEntryPage';
+import { GradeManagementPage } from '@features/examination/GradeManagementPage';
+import { ResultsPage } from '@features/examination/ResultsPage';
+import { ReportCardsPage } from '@features/examination/ReportCardsPage';
+import { TabulationPage } from '@features/examination/TabulationPage';
 import { TimetableDashboardPage } from '@features/timetable/TimetableDashboardPage';
 import { ClassTimetablePage } from '@features/timetable/ClassTimetablePage';
 import { TeacherTimetablePage } from '@features/timetable/TeacherTimetablePage';
@@ -254,6 +265,29 @@ function renderContent(activeMenu: string) {
       return <IdentityListPage />;
     case 'identityDetails':
       return <IdentityDetailsPage />;
+
+    case 'examDashboard':
+      return <ExamDashboardPage />;
+    case 'examTypes':
+      return <ExamTypesPage />;
+    case 'examSessions':
+      return <ExamSessionsPage />;
+    case 'examSchedule':
+      return <ExamSchedulePage />;
+    case 'examSeating':
+      return <SeatingPlanPage />;
+    case 'examAttendance':
+      return <ExamAttendancePage />;
+    case 'marksEntry':
+      return <MarksEntryPage />;
+    case 'gradeManagement':
+      return <GradeManagementPage />;
+    case 'examResults':
+      return <ResultsPage />;
+    case 'reportCards':
+      return <ReportCardsPage />;
+    case 'tabulation':
+      return <TabulationPage />;
 
     case 'timetableDashboard':
       return <TimetableDashboardPage />;
