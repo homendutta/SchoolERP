@@ -29,6 +29,44 @@ import { SubjectsPage } from '@features/academic/SubjectsPage';
 import { SubjectGroupsPage } from '@features/academic/SubjectGroupsPage';
 import { TeacherAssignmentsPage } from '@features/academic/TeacherAssignmentsPage';
 import { ClassTeachersPage } from '@features/academic/ClassTeachersPage';
+import { AdmissionDashboardPage } from '@features/admissions/AdmissionDashboardPage';
+import { EnquiriesPage } from '@features/admissions/EnquiriesPage';
+import { ApplicationsPage } from '@features/admissions/ApplicationsPage';
+import { VerificationPage } from '@features/admissions/VerificationPage';
+import { ApprovalPage } from '@features/admissions/ApprovalPage';
+import { EnrollmentPage } from '@features/admissions/EnrollmentPage';
+import { ImportPage } from '@features/admissions/ImportPage';
+import { StudentDashboardPage } from '@features/students/StudentDashboardPage';
+import { StudentListPage } from '@features/students/StudentListPage';
+import { StudentProfilePage } from '@features/students/StudentProfilePage';
+import { StudentTimelinePage } from '@features/students/StudentTimelinePage';
+import { MedicalPage } from '@features/students/MedicalPage';
+import { DocumentsPage as StudentDocumentsPage } from '@features/students/DocumentsPage';
+import { AcademicRecordsPage } from '@features/students/AcademicRecordsPage';
+import { TransfersPage } from '@features/students/TransfersPage';
+import { WithdrawalsPage } from '@features/students/WithdrawalsPage';
+import { PromotionsPage } from '@features/students/PromotionsPage';
+import { ImportPage as StudentImportPage } from '@features/students/ImportPage';
+import { ExportPage as StudentExportPage } from '@features/students/ExportPage';
+import { StaffDashboardPage } from '@features/staff/StaffDashboardPage';
+import { StaffListPage } from '@features/staff/StaffListPage';
+import { StaffProfilePage } from '@features/staff/StaffProfilePage';
+import { QualificationsPage } from '@features/staff/QualificationsPage';
+import { ExperiencePage } from '@features/staff/ExperiencePage';
+import { DocumentsPage as StaffDocumentsPage } from '@features/staff/DocumentsPage';
+import { TimelinePage as StaffTimelinePage } from '@features/staff/TimelinePage';
+import { ImportPage as StaffImportPage } from '@features/staff/ImportPage';
+import { ExportPage as StaffExportPage } from '@features/staff/ExportPage';
+import { IdentityDashboardPage } from '@features/identity/IdentityDashboardPage';
+import { IdentityListPage } from '@features/identity/IdentityListPage';
+import { IdentityDetailsPage } from '@features/identity/IdentityDetailsPage';
+import { AttendanceDashboardPage } from '@features/attendance/AttendanceDashboardPage';
+import { StudentAttendancePage } from '@features/attendance/StudentAttendancePage';
+import { StaffAttendancePage } from '@features/attendance/StaffAttendancePage';
+import { ManualAttendancePage } from '@features/attendance/ManualAttendancePage';
+import { AttendanceImportPage } from '@features/attendance/AttendanceImportPage';
+import { DeviceManagementPage } from '@features/attendance/DeviceManagementPage';
+import { BiometricLogsPage } from '@features/attendance/BiometricLogsPage';
 
 interface DashboardLayoutProps {
   children?: (activeMenu: string) => ReactNode;
@@ -142,6 +180,87 @@ function renderContent(activeMenu: string) {
       return <TeacherAssignmentsPage />;
     case 'classTeachers':
       return <ClassTeachersPage />;
+    // Admissions module
+    case 'admissionDashboard':
+      return <AdmissionDashboardPage />;
+    case 'admissionEnquiries':
+      return <EnquiriesPage />;
+    case 'admissionApplications':
+      return <ApplicationsPage />;
+    case 'admissionVerification':
+      return <VerificationPage />;
+    case 'admissionApproval':
+      return <ApprovalPage />;
+    case 'admissionEnrollment':
+      return <EnrollmentPage />;
+    case 'admissionImport':
+      return <ImportPage />;
+    // Students module
+    case 'studentDashboard':
+      return <StudentDashboardPage />;
+    case 'students':
+      return <StudentListPage />;
+    case 'studentProfile':
+      return <StudentProfilePage />;
+    case 'studentTimeline':
+      return <StudentTimelinePage />;
+    case 'studentMedical':
+      return <MedicalPage />;
+    case 'studentDocuments':
+      return <StudentDocumentsPage />;
+    case 'studentAcademicRecords':
+      return <AcademicRecordsPage />;
+    case 'studentTransfers':
+      return <TransfersPage />;
+    case 'studentWithdrawals':
+      return <WithdrawalsPage />;
+    case 'studentPromotions':
+      return <PromotionsPage />;
+    case 'studentImport':
+      return <StudentImportPage />;
+    case 'studentExport':
+      return <StudentExportPage />;
+    // Staff module
+    case 'staffDashboard':
+      return <StaffDashboardPage />;
+    case 'staff':
+      return <StaffListPage />;
+    case 'staffProfile':
+      return <StaffProfilePage />;
+    case 'staffQualifications':
+      return <QualificationsPage />;
+    case 'staffExperience':
+      return <ExperiencePage />;
+    case 'staffDocuments':
+      return <StaffDocumentsPage />;
+    case 'staffTimeline':
+      return <StaffTimelinePage />;
+    case 'staffImport':
+      return <StaffImportPage />;
+    case 'staffExport':
+      return <StaffExportPage />;
+    // Platform Identity Service
+    case 'identityDashboard':
+      return <IdentityDashboardPage />;
+    case 'identityList':
+      return <IdentityListPage />;
+    case 'identityDetails':
+      return <IdentityDetailsPage />;
+
+    case 'attendanceDashboard':
+      return <AttendanceDashboardPage />;
+    case 'studentAttendance':
+      return <StudentAttendancePage />;
+    case 'staffAttendance':
+      return <StaffAttendancePage />;
+    case 'manualAttendance':
+      return <ManualAttendancePage />;
+    case 'attendanceImport':
+      return <AttendanceImportPage />;
+    case 'attendanceDevices':
+      return <DeviceManagementPage />;
+    case 'biometricLogs':
+      return <BiometricLogsPage />;
     default:
       return <DefaultContent activeMenu={activeMenu} />;
   }
@@ -156,8 +275,8 @@ function DefaultContent({ activeMenu }: { activeMenu: string }) {
         <h2 className="text-lg font-semibold capitalize">{activeMenu}</h2>
       </div>
       <p className="mt-2 text-sm text-gray-500">
-        Engineering foundation — module pages mount here as they are built. The
-        layout, navigation, theme, and shell are production-ready.
+        Engineering foundation — module pages mount here as they are built. The layout, navigation,
+        theme, and shell are production-ready.
       </p>
     </div>
   );

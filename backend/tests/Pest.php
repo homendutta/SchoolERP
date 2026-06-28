@@ -9,6 +9,12 @@ use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Administration');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Academic');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Admissions');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Media');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Students');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Staff');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Identity');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Attendance');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

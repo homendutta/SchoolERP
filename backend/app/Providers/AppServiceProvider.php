@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Platform\Foundation\Identity\Models\Identity;
+use App\Platform\Foundation\Identity\Policies\IdentityPolicy;
+use App\Platform\Foundation\Media\Models\Media;
+use App\Platform\Foundation\Media\Policies\MediaPolicy;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -32,5 +38,14 @@ class AppServiceProvider extends ServiceProvider
         // Platform/Foundation infrastructure migrations (e.g., the media library)
         // are not owned by a business module, so they are loaded here.
         $this->loadMigrationsFrom(app_path('Platform/Foundation/Database/Migrations'));
+
+        // Shared Media Upload Pipeline — the single upload mechanism for every
+        // module. Platform infrastructure, so its routes/policy are wired here.
+        Route::prefix('api/v1')->group(app_path('Platform/Foundation/Media/routes.php'));
+        Gate::policy(Media::class, MediaPolicy::class);
+
+        // Platform Identity Service — permanent person-identity + QR/barcode.
+        Route::prefix('api/v1')->group(app_path('Platform/Foundation/Identity/routes.php'));
+        Gate::policy(Identity::class, IdentityPolicy::class);
     }
 }

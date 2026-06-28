@@ -50,6 +50,34 @@ class NumberGeneratorService extends BaseService
         });
     }
 
+    /**
+     * Reserve a manually-supplied number for a key. Guarantees future
+     * auto-generated numbers never collide by advancing the sequence past the
+     * reserved value, and records the issue in the Business Number Registry so
+     * audit history is preserved. Non-numeric numbers are recorded only.
+     */
+    public function reserve(string $key, string $number, ?int $schoolId = null, ?int $issuedBy = null): void
+    {
+        $this->transaction(function () use ($key, $number, $schoolId, $issuedBy): void {
+            $sequence = $this->lockSequence($key, $schoolId);
+
+            $numeric = preg_replace('/\D/', '', $number);
+            if ($numeric !== '' && (int) $numeric > (int) $sequence->current_number) {
+                $sequence->current_number = (int) $numeric;
+                $sequence->save();
+            }
+
+            BusinessNumber::create([
+                'school_id' => $schoolId,
+                'type' => $key,
+                'number' => $number,
+                'sequence_id' => $sequence->id,
+                'issued_by' => $issuedBy,
+                'generated_at' => now(),
+            ]);
+        });
+    }
+
     /** Preview the next number without consuming it. */
     public function peek(string $key, ?int $schoolId = null): string
     {

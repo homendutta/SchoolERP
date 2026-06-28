@@ -150,6 +150,6 @@ it('parses an uploaded csv into rows', function (): void {
 });
 
 it('fails import execute when no importer is registered', function (): void {
-    $this->postJson('/api/v1/admin/import/execute', ['key' => 'students', 'rows' => [['x' => 1]]])
+    $this->postJson('/api/v1/admin/import/execute', ['key' => 'unregistered_module', 'rows' => [['x' => 1]]])
         ->assertStatus(422)->assertJsonPath('code', 'IMPORTER_NOT_FOUND');
 });

@@ -16,6 +16,10 @@ class PermissionSeeder extends Seeder
     /** @var array<string, array<int, string>> module => actions */
     private const CATALOG = [
         'dashboard' => ['view'],
+        // Platform — shared Media Upload Pipeline (used by every module)
+        'media' => ['view', 'upload', 'delete'],
+        // Platform — Identity Service (permanent person-identity + QR/barcode)
+        'identity' => ['view', 'manage'],
         'users' => ['view', 'create', 'edit', 'delete'],
         'roles' => ['view', 'create', 'edit', 'delete'],
         'permissions' => ['view'],
@@ -39,6 +43,21 @@ class PermissionSeeder extends Seeder
         'academic.subject_groups' => ['view', 'create', 'edit', 'delete'],
         'academic.teacher_assignments' => ['view', 'create', 'edit', 'delete'],
         'academic.class_teachers' => ['view', 'assign'],
+        // Admissions (Sprint 4)
+        'admissions.dashboard' => ['view'],
+        'admissions.enquiries' => ['view', 'create', 'edit', 'delete'],
+        'admissions.applications' => ['view', 'create', 'edit', 'delete'],
+        'admissions.documents' => ['view', 'create', 'edit', 'delete'],
+        'admissions.verification' => ['view', 'manage'],
+        'admissions.approval' => ['view', 'create', 'edit', 'delete', 'manage'],
+        'admissions.enroll' => ['execute'],
+        'admissions.import' => ['execute'],
+        // Students (Sprint 5)
+        'students' => ['view', 'edit', 'promote', 'transfer', 'withdraw', 'import', 'export'],
+        // Staff (Sprint 6)
+        'staff' => ['view', 'create', 'edit', 'delete', 'import', 'export'],
+        // Attendance (Sprint 7)
+        'attendance' => ['view', 'mark', 'correct', 'import', 'devices', 'biometric'],
     ];
 
     public function run(): void
