@@ -1,5 +1,0 @@
-C:\SchoolERP\backend\README.md
-C:\SchoolERP\backend\app\Platform\Core\README.md
-C:\SchoolERP\backend\app\Platform\Foundation\README.md
-C:\SchoolERP\backend\app\Platform\README.md
-C:\SchoolERP\backend\app\Platform\Shared\README.md

@@ -19,6 +19,7 @@ use App\Modules\Reports\Providers\ReportsServiceProvider;
 use App\Modules\Staff\Providers\StaffServiceProvider;
 use App\Modules\Students\Providers\StudentsServiceProvider;
 use App\Modules\Timetable\Providers\TimetableServiceProvider;
+use App\Modules\Transport\Providers\TransportServiceProvider;
 use App\Modules\Website\Providers\WebsiteServiceProvider;
 use App\Providers\AppServiceProvider;
 
@@ -66,6 +67,7 @@ return [
 
     // Facilities
     LibraryServiceProvider::class,
+    TransportServiceProvider::class,
 
     // Engagement, facilities & reporting
     CommunicationServiceProvider::class,

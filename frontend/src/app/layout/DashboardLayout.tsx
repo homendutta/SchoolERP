@@ -80,6 +80,15 @@ import { ReturnsPage } from '@features/library/ReturnsPage';
 import { RenewalsPage } from '@features/library/RenewalsPage';
 import { ReservationsPage } from '@features/library/ReservationsPage';
 import { InventoryPage } from '@features/library/InventoryPage';
+import { TransportDashboardPage } from '@features/transport/TransportDashboardPage';
+import { VehiclesPage } from '@features/transport/VehiclesPage';
+import { RoutesPage as TransportRoutesPage } from '@features/transport/RoutesPage';
+import { StopsPage } from '@features/transport/StopsPage';
+import { TripsPage } from '@features/transport/TripsPage';
+import { StudentAssignmentPage as TransportStudentAssignmentPage } from '@features/transport/StudentAssignmentPage';
+import { DriverAssignmentPage } from '@features/transport/DriverAssignmentPage';
+import { VehicleDocumentsPage } from '@features/transport/VehicleDocumentsPage';
+import { MaintenanceSchedulePage } from '@features/transport/MaintenanceSchedulePage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -341,6 +350,25 @@ function renderContent(activeMenu: string) {
       return <ReservationsPage />;
     case 'libInventory':
       return <InventoryPage />;
+
+    case 'trDashboard':
+      return <TransportDashboardPage />;
+    case 'trVehicles':
+      return <VehiclesPage />;
+    case 'trRoutes':
+      return <TransportRoutesPage />;
+    case 'trStops':
+      return <StopsPage />;
+    case 'trTrips':
+      return <TripsPage />;
+    case 'trStudents':
+      return <TransportStudentAssignmentPage />;
+    case 'trDrivers':
+      return <DriverAssignmentPage />;
+    case 'trDocuments':
+      return <VehicleDocumentsPage />;
+    case 'trMaintenance':
+      return <MaintenanceSchedulePage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;
