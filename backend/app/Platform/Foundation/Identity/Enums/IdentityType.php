@@ -21,6 +21,7 @@ enum IdentityType: string
     case Vendor = 'vendor';
     case TransportDriver = 'transport_driver';
     case LibraryMember = 'library_member';
+    case LibraryCopy = 'library_copy';
 
     /** @return array<int, string> */
     public static function values(): array

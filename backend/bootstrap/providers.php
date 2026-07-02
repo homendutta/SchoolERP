@@ -1,5 +1,27 @@
 <?php
 
+declare(strict_types=1);
+
+use App\Modules\Academic\Providers\AcademicServiceProvider;
+use App\Modules\Accounts\Providers\AccountsServiceProvider;
+use App\Modules\Administration\Providers\AdministrationServiceProvider;
+use App\Modules\Admissions\Providers\AdmissionsServiceProvider;
+use App\Modules\Assets\Providers\AssetsServiceProvider;
+use App\Modules\Attendance\Providers\AttendanceServiceProvider;
+use App\Modules\Authentication\Providers\AuthenticationServiceProvider;
+use App\Modules\Communication\Providers\CommunicationServiceProvider;
+use App\Modules\Examination\Providers\ExaminationServiceProvider;
+use App\Modules\Finance\Providers\FinanceServiceProvider;
+use App\Modules\Inventory\Providers\InventoryServiceProvider;
+use App\Modules\Library\Providers\LibraryServiceProvider;
+use App\Modules\Parents\Providers\ParentsServiceProvider;
+use App\Modules\Reports\Providers\ReportsServiceProvider;
+use App\Modules\Staff\Providers\StaffServiceProvider;
+use App\Modules\Students\Providers\StudentsServiceProvider;
+use App\Modules\Timetable\Providers\TimetableServiceProvider;
+use App\Modules\Website\Providers\WebsiteServiceProvider;
+use App\Providers\AppServiceProvider;
+
 /*
 |--------------------------------------------------------------------------
 | Registered Service Providers
@@ -18,34 +40,37 @@
 */
 
 return [
-    App\Providers\AppServiceProvider::class,
+    AppServiceProvider::class,
 
     // Configuration & master data (depended upon by most modules)
-    App\Modules\Administration\Providers\AdministrationServiceProvider::class,
+    AdministrationServiceProvider::class,
 
     // Identity
-    App\Modules\Authentication\Providers\AuthenticationServiceProvider::class,
+    AuthenticationServiceProvider::class,
 
     // Academic structure & people
-    App\Modules\Academic\Providers\AcademicServiceProvider::class,
-    App\Modules\Staff\Providers\StaffServiceProvider::class,
-    App\Modules\Admissions\Providers\AdmissionsServiceProvider::class,
-    App\Modules\Students\Providers\StudentsServiceProvider::class,
-    App\Modules\Parents\Providers\ParentsServiceProvider::class,
+    AcademicServiceProvider::class,
+    StaffServiceProvider::class,
+    AdmissionsServiceProvider::class,
+    StudentsServiceProvider::class,
+    ParentsServiceProvider::class,
 
     // Daily operations & assessment
-    App\Modules\Timetable\Providers\TimetableServiceProvider::class,
-    App\Modules\Attendance\Providers\AttendanceServiceProvider::class,
-    App\Modules\Examination\Providers\ExaminationServiceProvider::class,
+    TimetableServiceProvider::class,
+    AttendanceServiceProvider::class,
+    ExaminationServiceProvider::class,
 
     // Finance
-    App\Modules\Finance\Providers\FinanceServiceProvider::class,
-    App\Modules\Accounts\Providers\AccountsServiceProvider::class,
+    FinanceServiceProvider::class,
+    AccountsServiceProvider::class,
+
+    // Facilities
+    LibraryServiceProvider::class,
 
     // Engagement, facilities & reporting
-    App\Modules\Communication\Providers\CommunicationServiceProvider::class,
-    App\Modules\Website\Providers\WebsiteServiceProvider::class,
-    App\Modules\Assets\Providers\AssetsServiceProvider::class,
-    App\Modules\Inventory\Providers\InventoryServiceProvider::class,
-    App\Modules\Reports\Providers\ReportsServiceProvider::class,
+    CommunicationServiceProvider::class,
+    WebsiteServiceProvider::class,
+    AssetsServiceProvider::class,
+    InventoryServiceProvider::class,
+    ReportsServiceProvider::class,
 ];

@@ -68,6 +68,18 @@ import { AnnouncementsPage } from '@features/communication/AnnouncementsPage';
 import { CircularsPage } from '@features/communication/CircularsPage';
 import { UserPreferencesPage } from '@features/communication/UserPreferencesPage';
 import { DeliveryTrackingPage } from '@features/communication/DeliveryTrackingPage';
+import { LibraryDashboardPage } from '@features/library/LibraryDashboardPage';
+import { CatalogPage } from '@features/library/CatalogPage';
+import { AuthorsPage } from '@features/library/AuthorsPage';
+import { PublishersPage } from '@features/library/PublishersPage';
+import { CategoriesPage as LibCategoriesPage } from '@features/library/CategoriesPage';
+import { LocationsPage } from '@features/library/LocationsPage';
+import { CopiesPage } from '@features/library/CopiesPage';
+import { BorrowingPage } from '@features/library/BorrowingPage';
+import { ReturnsPage } from '@features/library/ReturnsPage';
+import { RenewalsPage } from '@features/library/RenewalsPage';
+import { ReservationsPage } from '@features/library/ReservationsPage';
+import { InventoryPage } from '@features/library/InventoryPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -304,6 +316,31 @@ function renderContent(activeMenu: string) {
       return <UserPreferencesPage />;
     case 'commTracking':
       return <DeliveryTrackingPage />;
+
+    case 'libDashboard':
+      return <LibraryDashboardPage />;
+    case 'libCatalog':
+      return <CatalogPage />;
+    case 'libAuthors':
+      return <AuthorsPage />;
+    case 'libPublishers':
+      return <PublishersPage />;
+    case 'libCategories':
+      return <LibCategoriesPage />;
+    case 'libLocations':
+      return <LocationsPage />;
+    case 'libCopies':
+      return <CopiesPage />;
+    case 'libBorrowing':
+      return <BorrowingPage />;
+    case 'libReturns':
+      return <ReturnsPage />;
+    case 'libRenewals':
+      return <RenewalsPage />;
+    case 'libReservations':
+      return <ReservationsPage />;
+    case 'libInventory':
+      return <InventoryPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

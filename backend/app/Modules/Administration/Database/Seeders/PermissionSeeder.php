@@ -66,6 +66,8 @@ class PermissionSeeder extends Seeder
         'finance' => ['view', 'manage', 'collect', 'refund'],
         // Communication (Sprint 11)
         'communication' => ['view', 'manage', 'send'],
+        // Library (Sprint 12)
+        'library' => ['view', 'manage', 'circulate', 'inventory'],
     ];
 
     public function run(): void

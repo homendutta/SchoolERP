@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Modules\Library\Models;
+
+use App\Platform\Enums\RecordStatus;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Category extends Model
+{
+    use SoftDeletes;
+
+    protected $table = 'library_categories';
+
+    protected $fillable = ['school_id', 'name', 'code', 'description', 'status'];
+
+    /** @var array<string, mixed> */
+    protected $attributes = ['status' => 'active'];
+
+    protected function casts(): array
+    {
+        return ['status' => RecordStatus::class];
+    }
+}
