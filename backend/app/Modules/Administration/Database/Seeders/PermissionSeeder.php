@@ -70,6 +70,8 @@ class PermissionSeeder extends Seeder
         'library' => ['view', 'manage', 'circulate', 'inventory'],
         // Transport (Sprint 13)
         'transport' => ['view', 'manage', 'assign'],
+        // Hostel (Sprint 14)
+        'hostel' => ['view', 'manage', 'allocate'],
     ];
 
     public function run(): void

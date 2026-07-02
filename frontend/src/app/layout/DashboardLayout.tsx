@@ -89,6 +89,18 @@ import { StudentAssignmentPage as TransportStudentAssignmentPage } from '@featur
 import { DriverAssignmentPage } from '@features/transport/DriverAssignmentPage';
 import { VehicleDocumentsPage } from '@features/transport/VehicleDocumentsPage';
 import { MaintenanceSchedulePage } from '@features/transport/MaintenanceSchedulePage';
+import { HostelDashboardPage } from '@features/hostel/HostelDashboardPage';
+import { HostelsPage } from '@features/hostel/HostelsPage';
+import { BuildingsPage } from '@features/hostel/BuildingsPage';
+import { FloorsPage } from '@features/hostel/FloorsPage';
+import { RoomsPage as HostelRoomsPage } from '@features/hostel/RoomsPage';
+import { BedsPage } from '@features/hostel/BedsPage';
+import { StudentAllocationPage as HostelAllocationPage } from '@features/hostel/StudentAllocationPage';
+import { RoomTransfersPage } from '@features/hostel/RoomTransfersPage';
+import { WardensPage } from '@features/hostel/WardensPage';
+import { VisitorsPage } from '@features/hostel/VisitorsPage';
+import { MaintenancePage as HostelMaintenancePage } from '@features/hostel/MaintenancePage';
+import { HostelFeesPage } from '@features/hostel/HostelFeesPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -369,6 +381,31 @@ function renderContent(activeMenu: string) {
       return <VehicleDocumentsPage />;
     case 'trMaintenance':
       return <MaintenanceSchedulePage />;
+
+    case 'hostelDashboard':
+      return <HostelDashboardPage />;
+    case 'hostels':
+      return <HostelsPage />;
+    case 'hostelBuildings':
+      return <BuildingsPage />;
+    case 'hostelFloors':
+      return <FloorsPage />;
+    case 'hostelRooms':
+      return <HostelRoomsPage />;
+    case 'hostelBeds':
+      return <BedsPage />;
+    case 'hostelAllocation':
+      return <HostelAllocationPage />;
+    case 'hostelTransfers':
+      return <RoomTransfersPage />;
+    case 'hostelWardens':
+      return <WardensPage />;
+    case 'hostelVisitors':
+      return <VisitorsPage />;
+    case 'hostelMaintenance':
+      return <HostelMaintenancePage />;
+    case 'hostelFees':
+      return <HostelFeesPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

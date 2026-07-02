@@ -12,6 +12,7 @@ use App\Modules\Authentication\Providers\AuthenticationServiceProvider;
 use App\Modules\Communication\Providers\CommunicationServiceProvider;
 use App\Modules\Examination\Providers\ExaminationServiceProvider;
 use App\Modules\Finance\Providers\FinanceServiceProvider;
+use App\Modules\Hostel\Providers\HostelServiceProvider;
 use App\Modules\Inventory\Providers\InventoryServiceProvider;
 use App\Modules\Library\Providers\LibraryServiceProvider;
 use App\Modules\Parents\Providers\ParentsServiceProvider;
@@ -68,6 +69,7 @@ return [
     // Facilities
     LibraryServiceProvider::class,
     TransportServiceProvider::class,
+    HostelServiceProvider::class,
 
     // Engagement, facilities & reporting
     CommunicationServiceProvider::class,
