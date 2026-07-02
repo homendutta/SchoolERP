@@ -22,6 +22,7 @@ uses(TestCase::class, RefreshDatabase::class)->in('Feature/Communication');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Library');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Transport');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Hostel');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Inventory');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

@@ -7,6 +7,7 @@ export interface Staff {
   uuid: string;
   school_id: number;
   identity_id: number | null;
+  identity_number?: string | null;
   employee_number: string;
   name: string;
   gender_id: number | null;

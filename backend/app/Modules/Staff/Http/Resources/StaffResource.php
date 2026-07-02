@@ -23,6 +23,7 @@ class StaffResource extends BaseResource
             'uuid' => $this->uuid,
             'school_id' => $this->school_id,
             'identity_id' => $this->identity_id,
+            'identity_number' => $this->whenLoaded('identity', fn () => $this->identity?->identity_number),
             'employee_number' => $this->employee_number,
             'name' => $this->name,
             'gender_id' => $this->gender_id,

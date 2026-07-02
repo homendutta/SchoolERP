@@ -72,6 +72,8 @@ class PermissionSeeder extends Seeder
         'transport' => ['view', 'manage', 'assign'],
         // Hostel (Sprint 14)
         'hostel' => ['view', 'manage', 'allocate'],
+        // Inventory & Asset (Sprint 15)
+        'inventory' => ['view', 'manage', 'assign'],
     ];
 
     public function run(): void

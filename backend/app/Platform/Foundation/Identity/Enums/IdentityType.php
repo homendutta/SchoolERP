@@ -22,6 +22,7 @@ enum IdentityType: string
     case TransportDriver = 'transport_driver';
     case LibraryMember = 'library_member';
     case LibraryCopy = 'library_copy';
+    case Asset = 'asset';
 
     /** @return array<int, string> */
     public static function values(): array

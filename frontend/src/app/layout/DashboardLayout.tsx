@@ -101,6 +101,19 @@ import { WardensPage } from '@features/hostel/WardensPage';
 import { VisitorsPage } from '@features/hostel/VisitorsPage';
 import { MaintenancePage as HostelMaintenancePage } from '@features/hostel/MaintenancePage';
 import { HostelFeesPage } from '@features/hostel/HostelFeesPage';
+import { InventoryDashboardPage } from '@features/inventory/InventoryDashboardPage';
+import { CategoriesPage as InvCategoriesPage } from '@features/inventory/CategoriesPage';
+import { ModelsPage } from '@features/inventory/ModelsPage';
+import { VendorsPage } from '@features/inventory/VendorsPage';
+import { AssetsPage } from '@features/inventory/AssetsPage';
+import { ConsumablesPage } from '@features/inventory/ConsumablesPage';
+import { StockMovementsPage } from '@features/inventory/StockMovementsPage';
+import { AssetAssignmentsPage } from '@features/inventory/AssetAssignmentsPage';
+import { AssetTransfersPage } from '@features/inventory/AssetTransfersPage';
+import { MaintenancePage as InvMaintenancePage } from '@features/inventory/MaintenancePage';
+import { WarrantyPage } from '@features/inventory/WarrantyPage';
+import { VerificationPage as InvVerificationPage } from '@features/inventory/VerificationPage';
+import { DisposalPage } from '@features/inventory/DisposalPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -406,6 +419,33 @@ function renderContent(activeMenu: string) {
       return <HostelMaintenancePage />;
     case 'hostelFees':
       return <HostelFeesPage />;
+
+    case 'invDashboard':
+      return <InventoryDashboardPage />;
+    case 'invCategories':
+      return <InvCategoriesPage />;
+    case 'invModels':
+      return <ModelsPage />;
+    case 'invVendors':
+      return <VendorsPage />;
+    case 'invAssets':
+      return <AssetsPage />;
+    case 'invConsumables':
+      return <ConsumablesPage />;
+    case 'invMovements':
+      return <StockMovementsPage />;
+    case 'invAssignments':
+      return <AssetAssignmentsPage />;
+    case 'invTransfers':
+      return <AssetTransfersPage />;
+    case 'invMaintenance':
+      return <InvMaintenancePage />;
+    case 'invWarranty':
+      return <WarrantyPage />;
+    case 'invVerification':
+      return <InvVerificationPage />;
+    case 'invDisposal':
+      return <DisposalPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

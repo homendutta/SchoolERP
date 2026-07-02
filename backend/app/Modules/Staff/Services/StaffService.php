@@ -39,6 +39,7 @@ class StaffService extends BaseCrudService
             'gender:id,label,value',
             'bloodGroup:id,label,value',
             'reportingManager:id,name,employee_number',
+            'identity:id,identity_number,owner_type,owner_id',
         ]);
     }
 
