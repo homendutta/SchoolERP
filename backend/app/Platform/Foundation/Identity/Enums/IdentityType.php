@@ -23,6 +23,7 @@ enum IdentityType: string
     case LibraryMember = 'library_member';
     case LibraryCopy = 'library_copy';
     case Asset = 'asset';
+    case Document = 'document';
 
     /** @return array<int, string> */
     public static function values(): array

@@ -172,6 +172,14 @@ import { ReviewsPage as LmsReviewsPage } from '@features/lms/ReviewsPage';
 import { ResourcesPage as LmsResourcesPage } from '@features/lms/ResourcesPage';
 import { DiscussionsPage } from '@features/lms/DiscussionsPage';
 import { QuizzesPage } from '@features/lms/QuizzesPage';
+import { DocumentDashboardPage } from '@features/documents/DocumentDashboardPage';
+import { CategoriesPage as DocCategoriesPage } from '@features/documents/CategoriesPage';
+import { CertificateTypesPage } from '@features/documents/CertificateTypesPage';
+import { TemplatesPage as DocTemplatesPage } from '@features/documents/TemplatesPage';
+import { GeneratePage } from '@features/documents/GeneratePage';
+import { HistoryPage as DocHistoryPage } from '@features/documents/HistoryPage';
+import { BulkPage } from '@features/documents/BulkPage';
+import { DocumentVerificationPage } from '@features/documents/VerificationPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -625,6 +633,23 @@ function renderContent(activeMenu: string) {
       return <DiscussionsPage />;
     case 'lmsQuizzes':
       return <QuizzesPage />;
+
+    case 'docHome':
+      return <DocumentDashboardPage />;
+    case 'docCategories':
+      return <DocCategoriesPage />;
+    case 'docCertTypes':
+      return <CertificateTypesPage />;
+    case 'docTemplates':
+      return <DocTemplatesPage />;
+    case 'docGenerate':
+      return <GeneratePage />;
+    case 'docHistory':
+      return <DocHistoryPage />;
+    case 'docBulk':
+      return <BulkPage />;
+    case 'docVerify':
+      return <DocumentVerificationPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

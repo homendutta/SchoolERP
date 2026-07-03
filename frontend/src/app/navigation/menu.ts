@@ -28,6 +28,7 @@ export type MenuGroup =
   | 'website'
   | 'portal'
   | 'lms'
+  | 'documents'
   | 'support'
   | 'admin'
   | 'account';
@@ -48,6 +49,7 @@ export const GROUP_LABELS: Record<MenuGroup, string> = {
   website: 'Website / CMS',
   portal: 'Portal (Self-Service)',
   lms: 'Learning (LMS)',
+  documents: 'Certificates & Documents',
   support: 'Support',
   admin: 'Administration',
   account: 'Profile',
@@ -646,6 +648,40 @@ export const MENU_CATALOG: Record<string, MenuItem> = {
   lmsDiscussions: { id: 'lmsDiscussions', label: 'Discussions', icon: 'comments', group: 'lms' },
   lmsQuizzes: { id: 'lmsQuizzes', label: 'Quizzes', icon: 'circle-question', group: 'lms' },
 
+  docHome: { id: 'docHome', label: 'Document Dashboard', icon: 'stamp', group: 'documents' },
+  docCategories: {
+    id: 'docCategories',
+    label: 'Categories',
+    icon: 'folder-tree',
+    group: 'documents',
+  },
+  docCertTypes: {
+    id: 'docCertTypes',
+    label: 'Certificate Types',
+    icon: 'award',
+    group: 'documents',
+  },
+  docTemplates: { id: 'docTemplates', label: 'Templates', icon: 'file-code', group: 'documents' },
+  docGenerate: {
+    id: 'docGenerate',
+    label: 'Generate',
+    icon: 'file-circle-plus',
+    group: 'documents',
+  },
+  docHistory: {
+    id: 'docHistory',
+    label: 'Document History',
+    icon: 'clock-rotate-left',
+    group: 'documents',
+  },
+  docBulk: { id: 'docBulk', label: 'Bulk Generation', icon: 'layer-group', group: 'documents' },
+  docVerify: {
+    id: 'docVerify',
+    label: 'Verify Document',
+    icon: 'shield-halved',
+    group: 'documents',
+  },
+
   commDashboard: {
     id: 'commDashboard',
     label: 'Communication Dashboard',
@@ -1040,6 +1076,14 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'lmsResources',
     'lmsDiscussions',
     'lmsQuizzes',
+    'docHome',
+    'docCategories',
+    'docCertTypes',
+    'docTemplates',
+    'docGenerate',
+    'docHistory',
+    'docBulk',
+    'docVerify',
     'commDashboard',
     'commTemplates',
     'commQueue',
@@ -1243,6 +1287,14 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'lmsResources',
     'lmsDiscussions',
     'lmsQuizzes',
+    'docHome',
+    'docCategories',
+    'docCertTypes',
+    'docTemplates',
+    'docGenerate',
+    'docHistory',
+    'docBulk',
+    'docVerify',
     'feePayments',
     'accounts',
     'feeStructure',

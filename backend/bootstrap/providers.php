@@ -11,6 +11,7 @@ use App\Modules\Attendance\Providers\AttendanceServiceProvider;
 use App\Modules\Authentication\Providers\AuthenticationServiceProvider;
 use App\Modules\Cms\Providers\CmsServiceProvider;
 use App\Modules\Communication\Providers\CommunicationServiceProvider;
+use App\Modules\Documents\Providers\DocumentsServiceProvider;
 use App\Modules\Examination\Providers\ExaminationServiceProvider;
 use App\Modules\Finance\Providers\FinanceServiceProvider;
 use App\Modules\Hostel\Providers\HostelServiceProvider;
@@ -83,6 +84,7 @@ return [
     CmsServiceProvider::class,
     PortalServiceProvider::class,
     LmsServiceProvider::class,
+    DocumentsServiceProvider::class,
     WebsiteServiceProvider::class,
     AssetsServiceProvider::class,
     InventoryServiceProvider::class,
