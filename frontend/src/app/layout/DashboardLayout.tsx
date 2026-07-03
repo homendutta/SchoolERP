@@ -153,6 +153,15 @@ import { CmsCategoriesPage } from '@features/cms/CategoriesPage';
 import { FormsPage } from '@features/cms/FormsPage';
 import { EnquiriesPage as CmsEnquiriesPage } from '@features/cms/EnquiriesPage';
 import { SubmissionsPage } from '@features/cms/SubmissionsPage';
+import { PortalDashboardPage } from '@features/portal/PortalDashboardPage';
+import { PortalAttendancePage } from '@features/portal/PortalAttendancePage';
+import { PortalResultsPage } from '@features/portal/PortalResultsPage';
+import { PortalFeesPage } from '@features/portal/PortalFeesPage';
+import { PortalLibraryPage } from '@features/portal/PortalLibraryPage';
+import { PortalInfoPage } from '@features/portal/PortalInfoPage';
+import { PortalMessagesPage } from '@features/portal/PortalMessagesPage';
+import { PortalDownloadsPage } from '@features/portal/PortalDownloadsPage';
+import { PortalProfilePage } from '@features/portal/PortalProfilePage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -566,6 +575,25 @@ function renderContent(activeMenu: string) {
       return <CmsEnquiriesPage />;
     case 'cmsSubmissions':
       return <SubmissionsPage />;
+
+    case 'portalHome':
+      return <PortalDashboardPage />;
+    case 'portalAttendance':
+      return <PortalAttendancePage />;
+    case 'portalResults':
+      return <PortalResultsPage />;
+    case 'portalFees':
+      return <PortalFeesPage />;
+    case 'portalLibrary':
+      return <PortalLibraryPage />;
+    case 'portalInfo':
+      return <PortalInfoPage />;
+    case 'portalMessages':
+      return <PortalMessagesPage />;
+    case 'portalDownloads':
+      return <PortalDownloadsPage />;
+    case 'portalProfile':
+      return <PortalProfilePage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

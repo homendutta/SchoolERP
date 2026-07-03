@@ -26,6 +26,7 @@ uses(TestCase::class, RefreshDatabase::class)->in('Feature/Inventory');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Hr');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Payroll');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Cms');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Portal');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

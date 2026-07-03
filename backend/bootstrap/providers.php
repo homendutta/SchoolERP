@@ -19,6 +19,7 @@ use App\Modules\Inventory\Providers\InventoryServiceProvider;
 use App\Modules\Library\Providers\LibraryServiceProvider;
 use App\Modules\Parents\Providers\ParentsServiceProvider;
 use App\Modules\Payroll\Providers\PayrollServiceProvider;
+use App\Modules\Portal\Providers\PortalServiceProvider;
 use App\Modules\Reports\Providers\ReportsServiceProvider;
 use App\Modules\Staff\Providers\StaffServiceProvider;
 use App\Modules\Students\Providers\StudentsServiceProvider;
@@ -79,6 +80,7 @@ return [
     // Engagement, facilities & reporting
     CommunicationServiceProvider::class,
     CmsServiceProvider::class,
+    PortalServiceProvider::class,
     WebsiteServiceProvider::class,
     AssetsServiceProvider::class,
     InventoryServiceProvider::class,

@@ -26,6 +26,7 @@ export type MenuGroup =
   | 'records'
   | 'finance'
   | 'website'
+  | 'portal'
   | 'support'
   | 'admin'
   | 'account';
@@ -44,6 +45,7 @@ export const GROUP_LABELS: Record<MenuGroup, string> = {
   records: 'Records',
   finance: 'Finance',
   website: 'Website / CMS',
+  portal: 'Portal (Self-Service)',
   support: 'Support',
   admin: 'Administration',
   account: 'Profile',
@@ -586,6 +588,26 @@ export const MENU_CATALOG: Record<string, MenuItem> = {
     group: 'website',
   },
 
+  portalHome: { id: 'portalHome', label: 'Portal Dashboard', icon: 'gauge', group: 'portal' },
+  portalAttendance: {
+    id: 'portalAttendance',
+    label: 'My Attendance',
+    icon: 'clipboard-check',
+    group: 'portal',
+  },
+  portalResults: { id: 'portalResults', label: 'My Results', icon: 'award', group: 'portal' },
+  portalFees: { id: 'portalFees', label: 'My Fees & Payment', icon: 'wallet', group: 'portal' },
+  portalLibrary: { id: 'portalLibrary', label: 'My Library', icon: 'book', group: 'portal' },
+  portalInfo: { id: 'portalInfo', label: 'Transport & Hostel', icon: 'bus', group: 'portal' },
+  portalMessages: { id: 'portalMessages', label: 'My Messages', icon: 'envelope', group: 'portal' },
+  portalDownloads: {
+    id: 'portalDownloads',
+    label: 'Downloads',
+    icon: 'file-arrow-down',
+    group: 'portal',
+  },
+  portalProfile: { id: 'portalProfile', label: 'My Profile', icon: 'user', group: 'portal' },
+
   commDashboard: {
     id: 'commDashboard',
     label: 'Communication Dashboard',
@@ -961,6 +983,15 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'cmsForms',
     'cmsEnquiries',
     'cmsSubmissions',
+    'portalHome',
+    'portalAttendance',
+    'portalResults',
+    'portalFees',
+    'portalLibrary',
+    'portalInfo',
+    'portalMessages',
+    'portalDownloads',
+    'portalProfile',
     'commDashboard',
     'commTemplates',
     'commQueue',
@@ -1145,6 +1176,15 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'cmsForms',
     'cmsEnquiries',
     'cmsSubmissions',
+    'portalHome',
+    'portalAttendance',
+    'portalResults',
+    'portalFees',
+    'portalLibrary',
+    'portalInfo',
+    'portalMessages',
+    'portalDownloads',
+    'portalProfile',
     'feePayments',
     'accounts',
     'feeStructure',
