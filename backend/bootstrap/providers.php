@@ -9,6 +9,7 @@ use App\Modules\Admissions\Providers\AdmissionsServiceProvider;
 use App\Modules\Assets\Providers\AssetsServiceProvider;
 use App\Modules\Attendance\Providers\AttendanceServiceProvider;
 use App\Modules\Authentication\Providers\AuthenticationServiceProvider;
+use App\Modules\Cms\Providers\CmsServiceProvider;
 use App\Modules\Communication\Providers\CommunicationServiceProvider;
 use App\Modules\Examination\Providers\ExaminationServiceProvider;
 use App\Modules\Finance\Providers\FinanceServiceProvider;
@@ -77,6 +78,7 @@ return [
 
     // Engagement, facilities & reporting
     CommunicationServiceProvider::class,
+    CmsServiceProvider::class,
     WebsiteServiceProvider::class,
     AssetsServiceProvider::class,
     InventoryServiceProvider::class,

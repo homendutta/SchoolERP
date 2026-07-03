@@ -1,0 +1,171 @@
+﻿<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Asom Jnanbhumi Academy</title>
+    <meta name="keywords" content="#" />
+    <meta name="description" content="#" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta property="og:title" content="Asom Jnanbhumi Academy" />
+    <meta
+      property="og:description"
+      content="Welcome to Asom Jnanbhumi Academy. We Don't Just Teach - We Build Creators, Innovators & Future Leaders."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="Asom Jnanbhumi Academy" />
+    <meta name="theme-color" content="#0d47a1" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/aja_logo.png"
+    />
+    <link rel="canonical" href="#" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="../assets/css/vendor/magnifypopup.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/odometer.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/lightbox.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/animation.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/swiper_bundle.min.css" />
+
+    <!-- Menu CSS -->
+    <link rel="stylesheet" href="../assets/css/mega_menu/modern_megamenu.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/mega_menu/modern_megamenu_responsive.css"
+    />
+    <link rel="stylesheet" href="../assets/css/mega_menu/bootsnav.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/app.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../assets/css/cms.css" />
+    <link rel="stylesheet" href="../css/inline_styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body class="sticky-header">
+    <div class="wrapper">
+      <div id="main-wrapper" class="main-wrapper">
+        <!-- Header Include -->
+        <div id="header-placeholder"></div>
+
+        <!-- Page Content -->
+        <main>
+          <section class="cms-section"><div class="container"><h1 class="cms-section-title h3">Notices</h1><div data-cms="notices"></div></div></section>
+        </main>
+
+        <!-- Footer Include -->
+        <div id="footer-placeholder"></div>
+      </div>
+
+      <!-- Back To Top -->
+      <div class="rn-progress-parent">
+        <svg
+          class="rn-back-circle svg-inner"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path
+            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            style="
+              transition: stroke-dashoffset 10ms linear;
+              stroke-dasharray: 307.919, 307.919;
+              stroke-dashoffset: 307.919;
+            "
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../assets/js/vendor/modernizr.min.js"></script>
+    <script src="../assets/js/vendor/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/vendor/sal.min.js"></script>
+    <script src="../assets/js/vendor/jquery.waypoints.js"></script>
+    <script src="../assets/js/vendor/backtotop.min.js"></script>
+    <script src="../assets/js/vendor/magnifypopup.min.js"></script>
+    <script src="../assets/js/vendor/jquery.countdown.min.js"></script>
+    <script src="../assets/js/vendor/jquery.rprogressbar.min.js"></script>
+    <script src="../assets/js/vendor/easypie.js"></script>
+    <script src="../assets/js/vendor/odometer.min.js"></script>
+    <script src="../assets/js/vendor/isotop.min.js"></script>
+    <script src="../assets/js/vendor/imageloaded.min.js"></script>
+    <script src="../assets/js/vendor/lightbox.min.js"></script>
+    <script src="../assets/js/vendor/paralax.min.js"></script>
+    <script src="../assets/js/vendor/paralax_scroll.min.js"></script>
+    <script src="../assets/js/vendor/jquery_ui.min.js"></script>
+    <script src="../assets/js/vendor/swiper_bundle.min.js"></script>
+    <script src="../assets/js/vendor/svg_inject.min.js"></script>
+    <script src="../assets/js/vendor/vivus.min.js"></script>
+    <script src="../assets/js/vendor/tipped.min.js"></script>
+    <script src="../assets/js/vendor/smooth_scroll.min.js"></script>
+    <script src="../assets/js/vendor/isinviewport.jquery.min.js"></script>
+
+    <!-- Includes -->
+    <script src="../js/include.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="../js/inline_scripts.js"></script>
+    <script src="../assets/js/cms-config.js"></script>
+    <script src="../assets/js/cms.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        function bindMobileSubmenu() {
+          if (window.innerWidth > 991) return;
+
+          document
+            .querySelectorAll("#navbar-menu li.dropdown > a")
+            .forEach(function (link) {
+              link.onclick = function (e) {
+                const parent = this.parentElement;
+                const submenu = parent.querySelector(":scope > .dropdown-menu");
+
+                if (submenu) {
+                  e.preventDefault();
+                  e.stopPropagation();
+
+                  parent.parentElement
+                    .querySelectorAll(":scope > li.open")
+                    .forEach(function (item) {
+                      if (item !== parent) {
+                        item.classList.remove("open");
+                      }
+                    });
+
+                  parent.classList.toggle("open");
+                }
+              };
+            });
+        }
+
+        setTimeout(bindMobileSubmenu, 800);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+/*
+ * cms.css — light presentational polish for CMS-injected content only.
+ *
+ * Scoped to .cms-* classes emitted by cms.js so the existing site design and
+ * branding are untouched. Focuses on responsiveness, spacing, card/typography
+ * consistency and accessibility (focus states, reduced motion).
+ */
+
+.cms-section {
+  padding: 2.5rem 0;
+}
+.cms-section > .container {
+  max-width: 1200px;
+}
+.cms-section-title {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Cards / media -------------------------------------------------------- */
+.cms-card {
+  border: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cms-card:hover {
+  transform: translateY(-3px);
+}
+.cms-card-img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
+.cms-gallery-cell img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  transition: opacity 0.15s ease;
+}
+.cms-gallery-cell:focus img,
+.cms-gallery-cell:hover img {
+  opacity: 0.85;
+}
+.cms-video iframe,
+.cms-video video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Staff directory ------------------------------------------------------ */
+.cms-staff-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  display: inline-block;
+}
+.cms-staff-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef2f7;
+  color: #9aa7b8;
+  font-size: 1.75rem;
+}
+
+/* Notice ticker (homepage) -------------------------------------------- */
+.cms-ticker-item {
+  display: inline-block;
+  padding-right: 2.5rem;
+}
+
+/* Forms ---------------------------------------------------------------- */
+.cms-form-status {
+  min-height: 1.25rem;
+}
+
+/* Accessibility -------------------------------------------------------- */
+[data-cms][aria-busy='true']::after {
+  content: 'Loading…';
+  display: block;
+  padding: 1rem 0;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+.cms-gallery-cell:focus-visible,
+.cms-downloads a:focus-visible {
+  outline: 2px solid var(--bs-primary, #0d47a1);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cms-card,
+  .cms-gallery-cell img {
+    transition: none;
+  }
+  .cms-card:hover {
+    transform: none;
+  }
+}

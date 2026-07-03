@@ -139,6 +139,20 @@ import { ArrearsPage } from '@features/payroll/ArrearsPage';
 import { StatutoryPage } from '@features/payroll/StatutoryPage';
 import { PayrollRunsPage } from '@features/payroll/PayrollRunsPage';
 import { PayslipsPage } from '@features/payroll/PayslipsPage';
+import { CmsDashboardPage } from '@features/cms/CmsDashboardPage';
+import { WebsiteSettingsPage } from '@features/cms/WebsiteSettingsPage';
+import { PagesPage } from '@features/cms/PagesPage';
+import { NoticesPage as CmsNoticesPage } from '@features/cms/NoticesPage';
+import { NewsPage } from '@features/cms/NewsPage';
+import { EventsPage as CmsEventsPage } from '@features/cms/EventsPage';
+import { GalleryPage } from '@features/cms/GalleryPage';
+import { VideosPage } from '@features/cms/VideosPage';
+import { DownloadsPage } from '@features/cms/DownloadsPage';
+import { MenusPage } from '@features/cms/MenusPage';
+import { CmsCategoriesPage } from '@features/cms/CategoriesPage';
+import { FormsPage } from '@features/cms/FormsPage';
+import { EnquiriesPage as CmsEnquiriesPage } from '@features/cms/EnquiriesPage';
+import { SubmissionsPage } from '@features/cms/SubmissionsPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -523,6 +537,35 @@ function renderContent(activeMenu: string) {
       return <PayrollRunsPage />;
     case 'payrollPayslips':
       return <PayslipsPage />;
+
+    case 'cmsDashboard':
+      return <CmsDashboardPage />;
+    case 'cmsSettings':
+      return <WebsiteSettingsPage />;
+    case 'cmsPages':
+      return <PagesPage />;
+    case 'cmsNotices':
+      return <CmsNoticesPage />;
+    case 'cmsNews':
+      return <NewsPage />;
+    case 'cmsEvents':
+      return <CmsEventsPage />;
+    case 'cmsGallery':
+      return <GalleryPage />;
+    case 'cmsVideos':
+      return <VideosPage />;
+    case 'cmsDownloads':
+      return <DownloadsPage />;
+    case 'cmsMenus':
+      return <MenusPage />;
+    case 'cmsCategories':
+      return <CmsCategoriesPage />;
+    case 'cmsForms':
+      return <FormsPage />;
+    case 'cmsEnquiries':
+      return <CmsEnquiriesPage />;
+    case 'cmsSubmissions':
+      return <SubmissionsPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;
