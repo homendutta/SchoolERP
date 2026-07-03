@@ -24,6 +24,7 @@ uses(TestCase::class, RefreshDatabase::class)->in('Feature/Transport');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Hostel');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Inventory');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Hr');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Payroll');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

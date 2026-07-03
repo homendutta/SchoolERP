@@ -128,6 +128,17 @@ import { PerformancePage } from '@features/hr/PerformancePage';
 import { TrainingPage as HrTrainingPage } from '@features/hr/TrainingPage';
 import { DisciplinePage } from '@features/hr/DisciplinePage';
 import { SeparationPage } from '@features/hr/SeparationPage';
+import { PayrollDashboardPage } from '@features/payroll/PayrollDashboardPage';
+import { ComponentsPage as PayrollComponentsPage } from '@features/payroll/ComponentsPage';
+import { StructuresPage as PayrollStructuresPage } from '@features/payroll/StructuresPage';
+import { EmployeeSalaryPage } from '@features/payroll/EmployeeSalaryPage';
+import { SalaryRevisionsPage } from '@features/payroll/SalaryRevisionsPage';
+import { OvertimePage } from '@features/payroll/OvertimePage';
+import { LoansPage } from '@features/payroll/LoansPage';
+import { ArrearsPage } from '@features/payroll/ArrearsPage';
+import { StatutoryPage } from '@features/payroll/StatutoryPage';
+import { PayrollRunsPage } from '@features/payroll/PayrollRunsPage';
+import { PayslipsPage } from '@features/payroll/PayslipsPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -489,6 +500,29 @@ function renderContent(activeMenu: string) {
       return <DisciplinePage />;
     case 'hrSeparation':
       return <SeparationPage />;
+
+    case 'payrollDashboard':
+      return <PayrollDashboardPage />;
+    case 'payrollComponents':
+      return <PayrollComponentsPage />;
+    case 'payrollStructures':
+      return <PayrollStructuresPage />;
+    case 'payrollEmployeeSalary':
+      return <EmployeeSalaryPage />;
+    case 'payrollRevisions':
+      return <SalaryRevisionsPage />;
+    case 'payrollOvertime':
+      return <OvertimePage />;
+    case 'payrollLoans':
+      return <LoansPage />;
+    case 'payrollArrears':
+      return <ArrearsPage />;
+    case 'payrollStatutory':
+      return <StatutoryPage />;
+    case 'payrollRuns':
+      return <PayrollRunsPage />;
+    case 'payrollPayslips':
+      return <PayslipsPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

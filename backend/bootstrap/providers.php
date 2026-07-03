@@ -17,6 +17,7 @@ use App\Modules\HumanResources\Providers\HumanResourcesServiceProvider;
 use App\Modules\Inventory\Providers\InventoryServiceProvider;
 use App\Modules\Library\Providers\LibraryServiceProvider;
 use App\Modules\Parents\Providers\ParentsServiceProvider;
+use App\Modules\Payroll\Providers\PayrollServiceProvider;
 use App\Modules\Reports\Providers\ReportsServiceProvider;
 use App\Modules\Staff\Providers\StaffServiceProvider;
 use App\Modules\Students\Providers\StudentsServiceProvider;
@@ -55,6 +56,7 @@ return [
     AcademicServiceProvider::class,
     StaffServiceProvider::class,
     HumanResourcesServiceProvider::class,
+    PayrollServiceProvider::class,
     AdmissionsServiceProvider::class,
     StudentsServiceProvider::class,
     ParentsServiceProvider::class,
