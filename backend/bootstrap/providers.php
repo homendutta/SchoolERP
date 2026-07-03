@@ -13,6 +13,7 @@ use App\Modules\Communication\Providers\CommunicationServiceProvider;
 use App\Modules\Examination\Providers\ExaminationServiceProvider;
 use App\Modules\Finance\Providers\FinanceServiceProvider;
 use App\Modules\Hostel\Providers\HostelServiceProvider;
+use App\Modules\HumanResources\Providers\HumanResourcesServiceProvider;
 use App\Modules\Inventory\Providers\InventoryServiceProvider;
 use App\Modules\Library\Providers\LibraryServiceProvider;
 use App\Modules\Parents\Providers\ParentsServiceProvider;
@@ -53,6 +54,7 @@ return [
     // Academic structure & people
     AcademicServiceProvider::class,
     StaffServiceProvider::class,
+    HumanResourcesServiceProvider::class,
     AdmissionsServiceProvider::class,
     StudentsServiceProvider::class,
     ParentsServiceProvider::class,

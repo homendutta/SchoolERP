@@ -114,6 +114,20 @@ import { MaintenancePage as InvMaintenancePage } from '@features/inventory/Maint
 import { WarrantyPage } from '@features/inventory/WarrantyPage';
 import { VerificationPage as InvVerificationPage } from '@features/inventory/VerificationPage';
 import { DisposalPage } from '@features/inventory/DisposalPage';
+import { HrDashboardPage } from '@features/hr/HrDashboardPage';
+import { DepartmentsPage as HrDepartmentsPage } from '@features/hr/DepartmentsPage';
+import { DesignationsPage as HrDesignationsPage } from '@features/hr/DesignationsPage';
+import { EmploymentPage } from '@features/hr/EmploymentPage';
+import { ShiftsPage } from '@features/hr/ShiftsPage';
+import { AttendancePoliciesPage } from '@features/hr/AttendancePoliciesPage';
+import { LeaveTypesPage } from '@features/hr/LeaveTypesPage';
+import { LeavePoliciesPage } from '@features/hr/LeavePoliciesPage';
+import { LeaveRequestsPage } from '@features/hr/LeaveRequestsPage';
+import { HolidaysPage } from '@features/hr/HolidaysPage';
+import { PerformancePage } from '@features/hr/PerformancePage';
+import { TrainingPage as HrTrainingPage } from '@features/hr/TrainingPage';
+import { DisciplinePage } from '@features/hr/DisciplinePage';
+import { SeparationPage } from '@features/hr/SeparationPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -446,6 +460,35 @@ function renderContent(activeMenu: string) {
       return <InvVerificationPage />;
     case 'invDisposal':
       return <DisposalPage />;
+
+    case 'hrDashboard':
+      return <HrDashboardPage />;
+    case 'hrDepartments':
+      return <HrDepartmentsPage />;
+    case 'hrDesignations':
+      return <HrDesignationsPage />;
+    case 'hrEmployment':
+      return <EmploymentPage />;
+    case 'hrShifts':
+      return <ShiftsPage />;
+    case 'hrAttendancePolicies':
+      return <AttendancePoliciesPage />;
+    case 'hrLeaveTypes':
+      return <LeaveTypesPage />;
+    case 'hrLeavePolicies':
+      return <LeavePoliciesPage />;
+    case 'hrLeaveRequests':
+      return <LeaveRequestsPage />;
+    case 'hrHolidays':
+      return <HolidaysPage />;
+    case 'hrPerformance':
+      return <PerformancePage />;
+    case 'hrTraining':
+      return <HrTrainingPage />;
+    case 'hrDiscipline':
+      return <DisciplinePage />;
+    case 'hrSeparation':
+      return <SeparationPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;
