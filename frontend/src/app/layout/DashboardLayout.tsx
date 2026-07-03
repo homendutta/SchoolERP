@@ -162,6 +162,16 @@ import { PortalInfoPage } from '@features/portal/PortalInfoPage';
 import { PortalMessagesPage } from '@features/portal/PortalMessagesPage';
 import { PortalDownloadsPage } from '@features/portal/PortalDownloadsPage';
 import { PortalProfilePage } from '@features/portal/PortalProfilePage';
+import { LmsDashboardPage } from '@features/lms/LmsDashboardPage';
+import { LessonPlansPage } from '@features/lms/LessonPlansPage';
+import { LessonsPage } from '@features/lms/LessonsPage';
+import { MaterialsPage as LmsMaterialsPage } from '@features/lms/MaterialsPage';
+import { HomeworkPage } from '@features/lms/HomeworkPage';
+import { AssignmentsPage as LmsAssignmentsPage } from '@features/lms/AssignmentsPage';
+import { ReviewsPage as LmsReviewsPage } from '@features/lms/ReviewsPage';
+import { ResourcesPage as LmsResourcesPage } from '@features/lms/ResourcesPage';
+import { DiscussionsPage } from '@features/lms/DiscussionsPage';
+import { QuizzesPage } from '@features/lms/QuizzesPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -594,6 +604,27 @@ function renderContent(activeMenu: string) {
       return <PortalDownloadsPage />;
     case 'portalProfile':
       return <PortalProfilePage />;
+
+    case 'lmsHome':
+      return <LmsDashboardPage />;
+    case 'lmsLessonPlans':
+      return <LessonPlansPage />;
+    case 'lmsLessons':
+      return <LessonsPage />;
+    case 'lmsMaterials':
+      return <LmsMaterialsPage />;
+    case 'lmsHomework':
+      return <HomeworkPage />;
+    case 'lmsAssignments':
+      return <LmsAssignmentsPage />;
+    case 'lmsReviews':
+      return <LmsReviewsPage />;
+    case 'lmsResources':
+      return <LmsResourcesPage />;
+    case 'lmsDiscussions':
+      return <DiscussionsPage />;
+    case 'lmsQuizzes':
+      return <QuizzesPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

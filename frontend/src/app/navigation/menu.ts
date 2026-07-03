@@ -27,6 +27,7 @@ export type MenuGroup =
   | 'finance'
   | 'website'
   | 'portal'
+  | 'lms'
   | 'support'
   | 'admin'
   | 'account';
@@ -46,6 +47,7 @@ export const GROUP_LABELS: Record<MenuGroup, string> = {
   finance: 'Finance',
   website: 'Website / CMS',
   portal: 'Portal (Self-Service)',
+  lms: 'Learning (LMS)',
   support: 'Support',
   admin: 'Administration',
   account: 'Profile',
@@ -608,6 +610,42 @@ export const MENU_CATALOG: Record<string, MenuItem> = {
   },
   portalProfile: { id: 'portalProfile', label: 'My Profile', icon: 'user', group: 'portal' },
 
+  lmsHome: { id: 'lmsHome', label: 'Learning Dashboard', icon: 'graduation-cap', group: 'lms' },
+  lmsLessonPlans: {
+    id: 'lmsLessonPlans',
+    label: 'Lesson Plans',
+    icon: 'clipboard-list',
+    group: 'lms',
+  },
+  lmsLessons: { id: 'lmsLessons', label: 'Lessons', icon: 'book-open', group: 'lms' },
+  lmsMaterials: {
+    id: 'lmsMaterials',
+    label: 'Learning Materials',
+    icon: 'folder-open',
+    group: 'lms',
+  },
+  lmsHomework: { id: 'lmsHomework', label: 'Homework', icon: 'pen-to-square', group: 'lms' },
+  lmsAssignments: {
+    id: 'lmsAssignments',
+    label: 'Assignments',
+    icon: 'file-signature',
+    group: 'lms',
+  },
+  lmsReviews: {
+    id: 'lmsReviews',
+    label: 'Submission Reviews',
+    icon: 'clipboard-check',
+    group: 'lms',
+  },
+  lmsResources: {
+    id: 'lmsResources',
+    label: 'Classroom Resources',
+    icon: 'box-archive',
+    group: 'lms',
+  },
+  lmsDiscussions: { id: 'lmsDiscussions', label: 'Discussions', icon: 'comments', group: 'lms' },
+  lmsQuizzes: { id: 'lmsQuizzes', label: 'Quizzes', icon: 'circle-question', group: 'lms' },
+
   commDashboard: {
     id: 'commDashboard',
     label: 'Communication Dashboard',
@@ -992,6 +1030,16 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'portalMessages',
     'portalDownloads',
     'portalProfile',
+    'lmsHome',
+    'lmsLessonPlans',
+    'lmsLessons',
+    'lmsMaterials',
+    'lmsHomework',
+    'lmsAssignments',
+    'lmsReviews',
+    'lmsResources',
+    'lmsDiscussions',
+    'lmsQuizzes',
     'commDashboard',
     'commTemplates',
     'commQueue',
@@ -1185,6 +1233,16 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'portalMessages',
     'portalDownloads',
     'portalProfile',
+    'lmsHome',
+    'lmsLessonPlans',
+    'lmsLessons',
+    'lmsMaterials',
+    'lmsHomework',
+    'lmsAssignments',
+    'lmsReviews',
+    'lmsResources',
+    'lmsDiscussions',
+    'lmsQuizzes',
     'feePayments',
     'accounts',
     'feeStructure',

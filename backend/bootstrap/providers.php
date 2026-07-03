@@ -17,6 +17,7 @@ use App\Modules\Hostel\Providers\HostelServiceProvider;
 use App\Modules\HumanResources\Providers\HumanResourcesServiceProvider;
 use App\Modules\Inventory\Providers\InventoryServiceProvider;
 use App\Modules\Library\Providers\LibraryServiceProvider;
+use App\Modules\Lms\Providers\LmsServiceProvider;
 use App\Modules\Parents\Providers\ParentsServiceProvider;
 use App\Modules\Payroll\Providers\PayrollServiceProvider;
 use App\Modules\Portal\Providers\PortalServiceProvider;
@@ -81,6 +82,7 @@ return [
     CommunicationServiceProvider::class,
     CmsServiceProvider::class,
     PortalServiceProvider::class,
+    LmsServiceProvider::class,
     WebsiteServiceProvider::class,
     AssetsServiceProvider::class,
     InventoryServiceProvider::class,
