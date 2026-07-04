@@ -186,6 +186,11 @@ import { ReportViewerPage } from '@features/reports/ReportViewerPage';
 import { SavedReportsPage } from '@features/reports/SavedReportsPage';
 import { SchedulesPage as ReportSchedulesPage } from '@features/reports/SchedulesPage';
 import { ExportsPage as ReportExportsPage } from '@features/reports/ExportsPage';
+import { IntegrationDashboardPage } from '@features/integrations/IntegrationDashboardPage';
+import { CategoriesPage as IntCategoriesPage } from '@features/integrations/CategoriesPage';
+import { ProvidersPage as IntProvidersPage } from '@features/integrations/ProvidersPage';
+import { WebhooksPage as IntWebhooksPage } from '@features/integrations/WebhooksPage';
+import { LogsPage as IntLogsPage } from '@features/integrations/LogsPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -669,6 +674,17 @@ function renderContent(activeMenu: string) {
       return <ReportSchedulesPage />;
     case 'reportsExports':
       return <ReportExportsPage />;
+
+    case 'intDashboard':
+      return <IntegrationDashboardPage />;
+    case 'intCategories':
+      return <IntCategoriesPage />;
+    case 'intProviders':
+      return <IntProvidersPage />;
+    case 'intWebhooks':
+      return <IntWebhooksPage />;
+    case 'intLogs':
+      return <IntLogsPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;
