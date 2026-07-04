@@ -29,6 +29,7 @@ uses(TestCase::class, RefreshDatabase::class)->in('Feature/Cms');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Portal');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Lms');
 uses(TestCase::class, RefreshDatabase::class)->in('Feature/Documents');
+uses(TestCase::class, RefreshDatabase::class)->in('Feature/Reports');
 
 /** Create a super admin (bypasses permission checks) and authenticate as them. */
 function actingAsSuperAdmin(): User

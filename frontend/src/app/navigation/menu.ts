@@ -59,6 +59,26 @@ export const GROUP_LABELS: Record<MenuGroup, string> = {
 export const MENU_CATALOG: Record<string, MenuItem> = {
   dashboard: { id: 'dashboard', label: 'Dashboard', icon: 'chart-line', group: 'overview' },
   reports: { id: 'reports', label: 'Reports', icon: 'chart-pie', group: 'overview' },
+  reportsCatalog: {
+    id: 'reportsCatalog',
+    label: 'Report Catalog',
+    icon: 'book',
+    group: 'overview',
+  },
+  reportsViewer: { id: 'reportsViewer', label: 'Report Viewer', icon: 'table', group: 'overview' },
+  reportsSaved: { id: 'reportsSaved', label: 'Saved Reports', icon: 'bookmark', group: 'overview' },
+  reportsSchedules: {
+    id: 'reportsSchedules',
+    label: 'Scheduled Reports',
+    icon: 'clock',
+    group: 'overview',
+  },
+  reportsExports: {
+    id: 'reportsExports',
+    label: 'Export History',
+    icon: 'file-export',
+    group: 'overview',
+  },
 
   timetable: { id: 'timetable', label: 'Timetable', icon: 'calendar-alt', group: 'daily' },
   timetableDashboard: {
@@ -929,6 +949,11 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
   super_admin: [
     'dashboard',
     'reports',
+    'reportsCatalog',
+    'reportsViewer',
+    'reportsSaved',
+    'reportsSchedules',
+    'reportsExports',
     'academicDashboard',
     'academicYears',
     'terms',
@@ -1144,6 +1169,11 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
   admin: [
     'dashboard',
     'reports',
+    'reportsCatalog',
+    'reportsViewer',
+    'reportsSaved',
+    'reportsSchedules',
+    'reportsExports',
     'admissionDashboard',
     'admissionEnquiries',
     'admissionApplications',

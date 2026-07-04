@@ -180,6 +180,12 @@ import { GeneratePage } from '@features/documents/GeneratePage';
 import { HistoryPage as DocHistoryPage } from '@features/documents/HistoryPage';
 import { BulkPage } from '@features/documents/BulkPage';
 import { DocumentVerificationPage } from '@features/documents/VerificationPage';
+import { ReportsDashboardPage } from '@features/reports/ReportsDashboardPage';
+import { CatalogPage as ReportsCatalogPage } from '@features/reports/CatalogPage';
+import { ReportViewerPage } from '@features/reports/ReportViewerPage';
+import { SavedReportsPage } from '@features/reports/SavedReportsPage';
+import { SchedulesPage as ReportSchedulesPage } from '@features/reports/SchedulesPage';
+import { ExportsPage as ReportExportsPage } from '@features/reports/ExportsPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -650,6 +656,19 @@ function renderContent(activeMenu: string) {
       return <BulkPage />;
     case 'docVerify':
       return <DocumentVerificationPage />;
+
+    case 'reports':
+      return <ReportsDashboardPage />;
+    case 'reportsCatalog':
+      return <ReportsCatalogPage />;
+    case 'reportsViewer':
+      return <ReportViewerPage />;
+    case 'reportsSaved':
+      return <SavedReportsPage />;
+    case 'reportsSchedules':
+      return <ReportSchedulesPage />;
+    case 'reportsExports':
+      return <ReportExportsPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;
