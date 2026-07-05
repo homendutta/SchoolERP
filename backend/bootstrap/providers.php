@@ -12,11 +12,11 @@ use App\Modules\Authentication\Providers\AuthenticationServiceProvider;
 use App\Modules\Cms\Providers\CmsServiceProvider;
 use App\Modules\Communication\Providers\CommunicationServiceProvider;
 use App\Modules\Documents\Providers\DocumentsServiceProvider;
-use App\Modules\Integrations\Providers\IntegrationsServiceProvider;
 use App\Modules\Examination\Providers\ExaminationServiceProvider;
 use App\Modules\Finance\Providers\FinanceServiceProvider;
 use App\Modules\Hostel\Providers\HostelServiceProvider;
 use App\Modules\HumanResources\Providers\HumanResourcesServiceProvider;
+use App\Modules\Integrations\Providers\IntegrationsServiceProvider;
 use App\Modules\Inventory\Providers\InventoryServiceProvider;
 use App\Modules\Library\Providers\LibraryServiceProvider;
 use App\Modules\Lms\Providers\LmsServiceProvider;
@@ -26,6 +26,7 @@ use App\Modules\Portal\Providers\PortalServiceProvider;
 use App\Modules\Reports\Providers\ReportsServiceProvider;
 use App\Modules\Staff\Providers\StaffServiceProvider;
 use App\Modules\Students\Providers\StudentsServiceProvider;
+use App\Modules\System\Providers\SystemServiceProvider;
 use App\Modules\Timetable\Providers\TimetableServiceProvider;
 use App\Modules\Transport\Providers\TransportServiceProvider;
 use App\Modules\Website\Providers\WebsiteServiceProvider;
@@ -87,6 +88,7 @@ return [
     LmsServiceProvider::class,
     DocumentsServiceProvider::class,
     IntegrationsServiceProvider::class,
+    SystemServiceProvider::class,
     WebsiteServiceProvider::class,
     AssetsServiceProvider::class,
     InventoryServiceProvider::class,

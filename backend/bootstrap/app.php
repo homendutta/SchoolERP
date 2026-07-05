@@ -1,5 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
+use App\Platform\Core\Middleware\EnsurePermission;
+use App\Platform\Shared\Exceptions\DomainException;
+use App\Platform\Shared\Http\Responses\ApiResponse;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -23,14 +29,20 @@ return Application::configure(basePath: dirname(__DIR__))
         // Cross-cutting middleware aliases. The permission middleware (Platform/Core)
         // enforces server-side RBAC: ->middleware('permission:<slug>').
         $middleware->alias([
-            'permission' => App\Platform\Core\Middleware\EnsurePermission::class,
+            'permission' => EnsurePermission::class,
         ]);
+    })
+    ->withSchedule(function (Schedule $schedule): void {
+        // Centralized scheduler (Sprint 23). One `* * * * * php artisan schedule:run`
+        // cron entry drives every recurring task; each is queued/idempotent.
+        $schedule->command('system:cleanup')->dailyAt('02:30')->withoutOverlapping();
+        $schedule->command('queue:prune-failed --hours=336')->weekly();
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // Translate domain/business errors into the standard API error envelope.
-        $exceptions->render(function (App\Platform\Shared\Exceptions\DomainException $e, $request) {
+        $exceptions->render(function (DomainException $e, $request) {
             if ($request->expectsJson()) {
-                return App\Platform\Shared\Http\Responses\ApiResponse::error(
+                return ApiResponse::error(
                     $e->getMessage(),
                     $e->status,
                     $e->errorCode,

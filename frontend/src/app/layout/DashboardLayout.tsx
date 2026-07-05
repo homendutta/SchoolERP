@@ -191,6 +191,8 @@ import { CategoriesPage as IntCategoriesPage } from '@features/integrations/Cate
 import { ProvidersPage as IntProvidersPage } from '@features/integrations/ProvidersPage';
 import { WebhooksPage as IntWebhooksPage } from '@features/integrations/WebhooksPage';
 import { LogsPage as IntLogsPage } from '@features/integrations/LogsPage';
+import { ProductionDashboardPage } from '@features/system/ProductionDashboardPage';
+import { DiagnosticsPage as SysDiagnosticsPage } from '@features/system/DiagnosticsPage';
 import { FinanceDashboardPage } from '@features/finance/FinanceDashboardPage';
 import { FeeCategoriesPage } from '@features/finance/FeeCategoriesPage';
 import { FeeMastersPage } from '@features/finance/FeeMastersPage';
@@ -685,6 +687,11 @@ function renderContent(activeMenu: string) {
       return <IntWebhooksPage />;
     case 'intLogs':
       return <IntLogsPage />;
+
+    case 'sysDashboard':
+      return <ProductionDashboardPage />;
+    case 'sysDiagnostics':
+      return <SysDiagnosticsPage />;
 
     case 'finDashboard':
       return <FinanceDashboardPage />;

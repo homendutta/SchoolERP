@@ -96,6 +96,19 @@ export const MENU_CATALOG: Record<string, MenuItem> = {
   intWebhooks: { id: 'intWebhooks', label: 'Webhooks', icon: 'bolt', group: 'admin' },
   intLogs: { id: 'intLogs', label: 'Integration Logs', icon: 'list-ul', group: 'admin' },
 
+  sysDashboard: {
+    id: 'sysDashboard',
+    label: 'Production Dashboard',
+    icon: 'server',
+    group: 'admin',
+  },
+  sysDiagnostics: {
+    id: 'sysDiagnostics',
+    label: 'System Diagnostics',
+    icon: 'microchip',
+    group: 'admin',
+  },
+
   timetable: { id: 'timetable', label: 'Timetable', icon: 'calendar-alt', group: 'daily' },
   timetableDashboard: {
     id: 'timetableDashboard',
@@ -975,6 +988,8 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'intProviders',
     'intWebhooks',
     'intLogs',
+    'sysDashboard',
+    'sysDiagnostics',
     'academicDashboard',
     'academicYears',
     'terms',
@@ -1200,6 +1215,8 @@ export const MENU_PRIORITY: Record<Role, string[]> = {
     'intProviders',
     'intWebhooks',
     'intLogs',
+    'sysDashboard',
+    'sysDiagnostics',
     'admissionDashboard',
     'admissionEnquiries',
     'admissionApplications',
